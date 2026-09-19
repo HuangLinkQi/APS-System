@@ -1,0 +1,309 @@
+[p1 "APS 计划与排程平台" | space "APS业务重构逐项页面验收"(7): 1 managed, 0 untracked — p1* "APS 计划与排程平台"]
+root
+  container
+    container "主导航"
+      container
+        text "APS"
+        container
+          text "计划与排程平台"
+          text "Advanced Planning & Scheduling"
+      container
+        anchor [ref=1406, url=http://127.0.0.1:18745/#/plans]
+          text "计划管理"
+        anchor [ref=1407, loc=href:/#/rules, url=http://127.0.0.1:18745/#/rules]
+          text "基础数据"
+      container
+        text "演示服务已连接"
+        container
+          text "演示环境 · 未接入 ERP / MES"
+          text "提交不会产生生产指令"
+    container [ref=1036]
+      container
+        text "本次输入已准备完成，无需重复填写产能、节拍或工艺规则。"
+        container
+          anchor [ref=1410, loc=href:/#/plan/24dbc110fa1c/input, url=http://127.0.0.1:18745/#/plan/24dbc110fa1c/input]
+            text "查看本次输入"
+          button [ref=1411]
+            text "前往基础数据"
+      container
+        heading
+          text "2 · 生成方案"
+        paragraph
+          text "系统比较交期、颜色集中、负荷均衡和综合优化四种候选，不要求输入算法参数。"
+        paragraph
+          text "当前角色或计划状态不允许修改输入和重新计算。"
+      container
+        heading
+          text "3 · 查看并选择方案"
+        container
+          button [ref=1412]
+            text "交期优先"
+          button [ref=1413]
+            text "颜色集中"
+          button [ref=1414]
+            text "负荷均衡"
+          button [ref=1415]
+            text "综合优化"
+        container
+          heading
+            text "负荷均衡"
+          container
+            container
+              text "未完成订单"
+              text "3"
+              text "台（未排3+已排未完成0)"
+            container
+              text "完成准时率"
+              text "77.8"
+              text "%"
+            container
+              text "总拖期"
+              text "11570"
+              text "分钟（加权）"
+            container
+              text "换色次数"
+              text "5"
+              text "次"
+            container
+              text "完工跨度"
+              text "1699"
+              text "分钟"
+          text "当前模型独立校验通过；不代表完整工厂工艺均已覆盖。"
+          text "存在 3 台未完工订单（未排 3 台、已排未完工 0 台）：VIN_10、VIN_11、VIN_12"
+          container
+            container [ref=1418]
+              text "焊装投入顺序 · 9 辆"
+            table
+              table_row
+                table_cell
+                table_cell
+                table_cell
+                table_cell
+                table_cell
+                table_cell
+                table_cell
+  dialog "历史计算 · e01ef350c308" [ref=1404, loc=role:dialog[name="历史计算 · e01ef350c308"]]
+    container
+      table
+        table_row
+          table_cell
+            text "8"
+          table_cell
+            text "VIN_08"
+          table_cell
+            text "VIN_08"
+          table_cell
+            text "SUV"
+          table_cell
+            text "WHITE"
+          table_cell
+            text "1"
+          table_cell
+            text "2"
+        table_row
+          table_cell
+            text "9"
+          table_cell
+            text "VIN_09"
+          table_cell
+            text "VIN_09"
+          table_cell
+            text "SEDAN"
+          table_cell
+            text "RED"
+          table_cell
+            text "1"
+          table_cell
+            text "2"
+        table_row
+          table_cell
+            text "10"
+          table_cell
+            text "VIN_10"
+          table_cell
+            text "VIN_10"
+          table_cell
+            text "SUV"
+          table_cell
+            text "BLACK"
+          table_cell
+            text "2"
+          table_cell
+            text "2"
+        table_row
+          table_cell
+            text "11"
+          table_cell
+            text "VIN_11"
+          table_cell
+            text "VIN_11"
+          table_cell
+            text "SUV"
+          table_cell
+            text "WHITE"
+          table_cell
+            text "2"
+          table_cell
+            text "3"
+        table_row
+          table_cell
+            text "12"
+          table_cell
+            text "VIN_12"
+          table_cell
+            text "VIN_12"
+          table_cell
+            text "SUV"
+          table_cell
+            text "WHITE"
+          table_cell
+            text "2"
+          table_cell
+            text "3"
+      container
+        container [ref=1405]
+          text "各工序时间 · 从场景起点计分钟"
+        table
+          table_row
+            table_cell
+              text "车辆"
+            table_cell
+              text "工序"
+            table_cell
+              text "产线"
+            table_cell
+              text "准备开始"
+            table_cell
+              text "加工开始"
+            table_cell
+              text "加工完成"
+            table_cell
+              text "释放设备"
+          table_row
+            table_cell
+              text "VIN_01"
+            table_cell
+              text "焊装"
+            table_cell
+              text "W_LINE"
+            table_cell
+              text "0"
+            table_cell
+              text "0"
+            table_cell
+              text "15"
+            table_cell
+              text "15"
+          table_row
+            table_cell
+              text "VIN_02"
+            table_cell
+              text "焊装"
+            table_cell
+              text "W_LINE"
+            table_cell
+              text "15"
+            table_cell
+              text "15"
+            table_cell
+              text "30"
+            table_cell
+              text "30"
+          table_row
+            table_cell
+              text "VIN_01"
+            table_cell
+              text "涂装"
+            table_cell
+              text "P_LINE"
+            table_cell
+              text "17"
+            table_cell
+              text "17"
+            table_cell
+              text "52"
+            table_cell
+              text "52"
+          table_row
+            table_cell
+              text "VIN_03"
+            table_cell
+              text "焊装"
+            table_cell
+              text "W_LINE"
+            table_cell
+              text "30"
+            table_cell
+              text "30"
+            table_cell
+              text "45"
+            table_cell
+              text "45"
+          table_row
+            table_cell
+              text "VIN_04_PULLOUT"
+            table_cell
+              text "焊装"
+            table_cell
+              text "W_LINE"
+            table_cell
+              text "45"
+            table_cell
+              text "45"
+            table_cell
+              text "60"
+            table_cell
+              text "60"
+          table_row
+            table_cell
+              text "VIN_02"
+            table_cell
+              text "涂装"
+            table_cell
+              text "P_LINE"
+            table_cell
+              text "52"
+            table_cell
+              text "62"
+            table_cell
+              text "97"
+            table_cell
+              text "97"
+          table_row
+            table_cell
+              text "VIN_01"
+            table_cell
+              text "总装"
+            table_cell
+              text "A_LINE"
+            table_cell
+              text "60"
+            table_cell
+              text "60"
+            table_cell
+              text "100"
+            table_cell
+              text "100"
+          table_row
+            table_cell
+              text "VIN_03"
+            table_cell
+              text "涂装"
+            table_cell
+              text "P_LINE"
+            table_cell
+              text "97"
+            table_cell
+              text "107"
+            table_cell
+              text "142"
+            table_cell
+              text "142"
+          table_row
+            table_cell
+            table_cell
+            table_cell
+            table_cell
+            table_cell
+            table_cell
+            table_cell

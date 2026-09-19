@@ -1,0 +1,67 @@
+[p1 "APS 计划与排程平台" | space "APS业务重构逐项页面验收"(7): 1 managed, 0 untracked — p1* "APS 计划与排程平台"]
+root
+  container "主导航"
+    container
+      text "APS"
+      container
+        text "计划与排程平台"
+        text "Advanced Planning & Scheduling"
+    container
+      anchor [ref=2559, url=http://127.0.0.1:18745/#/plans]
+        text "计划管理"
+      anchor [ref=2560, loc=href:/#/rules, url=http://127.0.0.1:18745/#/rules]
+        text "基础数据"
+    container
+      text "演示服务已连接"
+      container
+        text "演示环境 · 未接入 ERP / MES"
+        text "提交不会产生生产指令"
+  container [ref=2549]
+    container
+      anchor [ref=2563, loc=href:/#/plan/169f1602e860/input, url=http://127.0.0.1:18745/#/plan/169f1602e860/input]
+        text "查看本次输入"
+      button [ref=2564]
+        text "前往基础数据"
+      button [ref=2565]
+        text "引用最新基础数据"
+      button [ref=2566]
+        text "更换演示场景"
+    container
+      heading
+        text "2 · 生成方案"
+      paragraph
+        text "系统比较交期、颜色集中、负荷均衡和综合优化四种候选，不要求输入算法参数。"
+      button [ref=2567]
+        text "生成方案"
+    container
+      heading
+        text "3 · 方案结果"
+      text "尚无计算结果。不会展示预填的调度顺序或指标。"
+    container
+      heading
+        text "4 · 提交与审批"
+      paragraph
+        text "计算并选择方案后可提交审批。"
+    container
+      heading
+        text "计算历史"
+      table
+        table_row
+          table_cell
+            text "任务编号"
+          table_cell
+            text "状态"
+          table_cell
+            text "开始时间"
+          table_cell
+            text "操作"
+        table_row
+          table_cell
+            text "a3ceeb000c8d"
+          table_cell
+            text "已完成"
+          table_cell
+            text "2026-09-18T19:37:16+00:00"
+          table_cell
+            button [ref=2568]
+              text "查看历史计算"

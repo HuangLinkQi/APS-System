@@ -1,0 +1,183 @@
+[p1 "APS 计划与排程平台" | space "APS业务重构逐项页面验收"(7): 1 managed, 0 untracked — p1* "APS 计划与排程平台"]
+root
+  container "主导航"
+    container
+      text "APS"
+      container
+        text "计划与排程平台"
+        text "Advanced Planning & Scheduling"
+    container
+      anchor [ref=1237, loc=href:/#/plans, url=http://127.0.0.1:18745/#/plans]
+        text "计划管理"
+      anchor [ref=1238, loc=href:/#/rules, url=http://127.0.0.1:18745/#/rules]
+        text "基础数据"
+    container
+      text "演示服务已连接"
+      container
+        text "演示环境 · 未接入 ERP / MES"
+        text "提交不会产生生产指令"
+  container
+    container
+      container
+        text "APS"
+        text "排程工作台"
+      container
+        text "计划员 A · F1 · F1 / FACTORY_1"
+        container
+          text "模拟身份"
+          combobox "模拟身份" [ref=1034, loc=css:select[aria-label="模拟身份"]]
+            text "计划员 A · F1"
+        button [ref=1035]
+          text "刷新"
+    container [ref=1036]
+      container
+        container
+          heading
+            text "本次输入 · T24-缺料-短路"
+          paragraph
+            text "演示输入快照 · 基础资料版本 1 · 本页只读，不是排程填写表单。"
+        anchor [ref=1239, loc=href:/#/plan/24dbc110fa1c, url=http://127.0.0.1:18745/#/plan/24dbc110fa1c]
+          text "返回排程"
+      text "时间基准：从场景第1天00:00起累计分钟，不映射真实生产日期。人员、切换与转运包含演示假设。未来事件仅展示来源；当前计算以起点已知信息为基�..."
+      container
+        heading
+          text "需求与供应"
+        container
+          container [ref=1240]
+            text "订单 · 12 辆"
+          table
+            table_row
+              table_cell
+                text "订单"
+              table_cell
+                text "车辆"
+              table_cell
+                text "配置"
+              table_cell
+                text "工艺路径"
+              table_cell
+                text "优先级"
+              table_cell
+                text "释放分钟"
+              table_cell
+                text "交期分钟"
+            table_row
+              table_cell
+                text "VIN_01"
+              table_cell
+                text "VIN_01"
+              table_cell
+                text "SUV_WHITE"
+              table_cell
+                text "W → P → A"
+              table_cell
+                text "1"
+              table_cell
+                text "0"
+              table_cell
+                text "450"
+            table_row
+              table_cell
+                text "VIN_02"
+              table_cell
+                text "VIN_02"
+              table_cell
+                text "SUV_BLACK"
+              table_cell
+                text "W → P → A"
+              table_cell
+                text "1"
+              table_cell
+                text "0"
+              table_cell
+                text "460"
+            table_row
+              table_cell
+                text "VIN_03"
+              table_cell
+                text "VIN_03"
+              table_cell
+                text "SUV_WHITE"
+              table_cell
+                text "W → P → A"
+              table_cell
+                text "1"
+              table_cell
+                text "0"
+              table_cell
+                text "470"
+            table_row
+              table_cell
+                text "VIN_04_PULLOUT"
+              table_cell
+                text "VIN_04_PULLOUT"
+              table_cell
+                text "PULLOUT_CAR"
+              table_cell
+                text "W → P"
+              table_cell
+                text "1"
+              table_cell
+                text "0"
+              table_cell
+                text "480"
+            table_row
+              table_cell
+                text "VIN_05"
+              table_cell
+                text "VIN_05"
+              table_cell
+                text "SEDAN_RED"
+              table_cell
+                text "W → P → A"
+              table_cell
+                text "2"
+              table_cell
+                text "0"
+              table_cell
+                text "480"
+            table_row
+              table_cell
+                text "VIN_06"
+              table_cell
+                text "VIN_06"
+              table_cell
+                text "SUV_WHITE"
+              table_cell
+                text "W → P → A"
+              table_cell
+                text "2"
+              table_cell
+                text "0"
+              table_cell
+                text "480"
+            table_row
+              table_cell
+                text "VIN_07"
+              table_cell
+                text "VIN_07"
+              table_cell
+                text "SUV_BLACK"
+              table_cell
+                text "W → P → A"
+              table_cell
+                text "2"
+              table_cell
+                text "0"
+              table_cell
+                text "1800"
+            table_row
+              table_cell
+                text "VIN_08"
+              table_cell
+                text "VIN_08"
+              table_cell
+                text "SUV_WHITE"
+              table_cell
+                text "W → P → A"
+              table_cell
+                text "1"
+              table_cell
+                text "1440"
+              table_cell
+                text "1900"

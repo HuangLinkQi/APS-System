@@ -1,0 +1,93 @@
+[p1 "APS 计划与排程平台" | space "APS业务重构逐项页面验收"(7): 1 managed, 0 untracked — p1* "APS 计划与排程平台"]
+root
+  container
+    container "主导航"
+      container
+        text "APS"
+        container
+          text "计划与排程平台"
+          text "Advanced Planning & Scheduling"
+      container
+        anchor [ref=664, loc=href:/#/plans, url=http://127.0.0.1:18745/#/plans]
+          text "计划管理"
+        anchor [ref=665, loc=href:/#/rules, url=http://127.0.0.1:18745/#/rules]
+          text "基础数据"
+      container
+        text "演示服务已连接"
+        container
+          text "演示环境 · 未接入 ERP / MES"
+          text "提交不会产生生产指令"
+    container
+      container
+        container
+          text "APS"
+          text "计划管理"
+        container
+          text "计划员 B · F2 · F2 / FACTORY_2"
+          container
+            text "模拟身份"
+            combobox "模拟身份" [ref=589, loc=css:select[aria-label="模拟身份"]]
+              text "计划员 B · F2"
+          button [ref=590]
+            text "刷新"
+      container [ref=591]
+        container
+          container
+            heading
+              text "计划管理"
+            paragraph
+              text "从业务数据生成排程方案。无预置计划，无预置计算结果。"
+          button [ref=666]
+            text "新建排程"
+        container
+          container
+            text "搜索计划"
+            searchbox [ref=667, loc=css:input[placeholder="输入名称或编号"]]
+              text "输入名称或编号"
+          container
+            text "状态"
+            combobox [ref=668]
+              text "全部状态"
+          button [ref=669]
+            text "刷新列表"
+        container
+          heading
+            text "计划列表 · 0 条"
+          table
+            table_row
+              table_cell
+                text "计划名称"
+              table_cell
+                text "工厂"
+              table_cell
+                text "状态"
+              table_cell
+                text "数据来源"
+              table_cell
+                text "历史计算"
+              table_cell
+                text "操作"
+            table_row
+              table_cell
+                text "暂无记录"
+          text "暂无计划。通过“新建排程”开始；系统不会自动生成演示计划。"
+      text "APS 计划平台 · 演示环境：数据来自本机后端服务，未接入生产系统；角色为模拟身份，非生产鉴权。"
+  dialog "新建排程"
+    heading
+      text "新建排程"
+    form
+      container
+        text "计划名称"
+        textbox [ref=670, loc=css:input[name="name"]]
+          text "例如：验收-正常生产-01"
+      container
+        text "工厂"
+        combobox [ref=671, loc=css:select[name="factory"]]
+          text "F2"
+      paragraph
+        text "计划类型：W+3演示排程。长期计划尚未开放。"
+      container
+        button [ref=672]
+          text "下一步"
+        button [ref=673]
+          text "取消"

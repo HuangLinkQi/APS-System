@@ -1,0 +1,1840 @@
+拒绝0的当前页面
+[p1 "APS 计划与排程平台" | space "APS业务重构逐项页面验收"(7): 1 managed, 0 untracked — p1* "APS 计划与排程平台"]
+root
+  container
+    container "主导航"
+      container
+        text "APS"
+        container
+          text "计划与排程平台"
+          text "Advanced Planning & Scheduling"
+      container
+        anchor [ref=107, loc=href:/#/plans, url=http://127.0.0.1:18745/#/plans]
+          text "计划管理"
+        anchor [ref=108, loc=href:/#/rules, url=http://127.0.0.1:18745/#/rules]
+          text "基础数据"
+      container
+        text "演示服务已连接"
+        container
+          text "演示环境 · 未接入 ERP / MES"
+          text "提交不会产生生产指令"
+    container [ref=52]
+      container
+        container
+          container
+            table
+              table_row
+                table_cell
+                  textbox "产线2编号" [ref=118, loc=css:input[aria-label="产线2编号"]]
+                    text "P_LINE"
+                table_cell
+                  combobox "产线2工序" [ref=119, loc=css:select[aria-label="产线2工序"]]
+                    text "涂装"
+                table_cell
+                  combobox "产线2状态" [ref=120, loc=css:select[aria-label="产线2状态"]]
+                    text "启用"
+              table_row
+                table_cell
+                  textbox "产线3编号" [ref=121, loc=css:input[aria-label="产线3编号"]]
+                    text "A_LINE"
+                table_cell
+                  combobox "产线3工序" [ref=122, loc=css:select[aria-label="产线3工序"]]
+                    text "总装"
+                table_cell
+                  combobox "产线3状态" [ref=123, loc=css:select[aria-label="产线3状态"]]
+                    text "启用"
+            button [ref=126]
+              text "新增产线"
+            text "当前模型每个工序仅支持1条启用产线、单资源加工。新增产线可先停用，替换时先停用旧线；不提供无效的并行能力输入。"
+          container
+            container [ref=127]
+              text "生产节拍（每车分钟）"
+            table
+              table_row
+                table_cell
+                  text "配置"
+                table_cell
+                  text "车型"
+                table_cell
+                  text "颜色"
+                table_cell
+                  text "工序"
+                table_cell
+                  text "节拍（分钟）"
+              table_row
+                table_cell
+                  text "SUV_WHITE"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "WHITE"
+                table_cell
+                  text "焊装"
+                table_cell
+                  spinbutton "SUV_WHITE 焊装节拍" [ref=128, loc=css:input[aria-label="SUV_WHITE 焊装节拍"]]
+                    text "0"
+              table_row
+                table_cell
+                  text "SUV_WHITE"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "WHITE"
+                table_cell
+                  text "涂装"
+                table_cell
+                  spinbutton "SUV_WHITE 涂装节拍" [ref=129, loc=css:input[aria-label="SUV_WHITE 涂装节拍"]]
+                    text "35"
+              table_row
+                table_cell
+                  text "SUV_WHITE"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "WHITE"
+                table_cell
+                  text "总装"
+                table_cell
+                  spinbutton "SUV_WHITE 总装节拍" [ref=130, loc=css:input[aria-label="SUV_WHITE 总装节拍"]]
+                    text "25"
+              table_row
+                table_cell
+                  text "SUV_BLACK"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "BLACK"
+                table_cell
+                  text "焊装"
+                table_cell
+                  spinbutton "SUV_BLACK 焊装节拍" [ref=131, loc=css:input[aria-label="SUV_BLACK 焊装节拍"]]
+                    text "15"
+              table_row
+                table_cell
+                  text "SUV_BLACK"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "BLACK"
+                table_cell
+                  text "涂装"
+                table_cell
+                  spinbutton "SUV_BLACK 涂装节拍" [ref=132, loc=css:input[aria-label="SUV_BLACK 涂装节拍"]]
+                    text "35"
+              table_row
+                table_cell
+                  text "SUV_BLACK"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "BLACK"
+                table_cell
+                  text "总装"
+                table_cell
+                  spinbutton "SUV_BLACK 总装节拍" [ref=133, loc=css:input[aria-label="SUV_BLACK 总装节拍"]]
+                    text "25"
+              table_row
+                table_cell
+                  text "SEDAN_RED"
+                table_cell
+                  text "SEDAN"
+                table_cell
+                  text "RED"
+                table_cell
+                  text "焊装"
+                table_cell
+                  spinbutton "SEDAN_RED 焊装节拍" [ref=134, loc=css:input[aria-label="SEDAN_RED 焊装节拍"]]
+                    text "20"
+        container
+          button [ref=124]
+            text "保存新版本"
+          button [ref=125]
+            text "放弃修改"
+  status
+    text "SUV_WHITE 焊装节拍（分钟）须为不小于1的整数"
+
+输入负数
+[p1 "APS 计划与排程平台" | space "APS业务重构逐项页面验收"(7): 1 managed, 0 untracked — p1* "APS 计划与排程平台"]
+root
+  container
+    container "主导航"
+      container
+        text "APS"
+        container
+          text "计划与排程平台"
+          text "Advanced Planning & Scheduling"
+      container
+        anchor [ref=107, loc=href:/#/plans, url=http://127.0.0.1:18745/#/plans]
+          text "计划管理"
+        anchor [ref=108, loc=href:/#/rules, url=http://127.0.0.1:18745/#/rules]
+          text "基础数据"
+      container
+        text "演示服务已连接"
+        container
+          text "演示环境 · 未接入 ERP / MES"
+          text "提交不会产生生产指令"
+    container [ref=52]
+      container
+        container
+          container
+            table
+              table_row
+                table_cell
+                  textbox "产线2编号" [ref=118, loc=css:input[aria-label="产线2编号"]]
+                    text "P_LINE"
+                table_cell
+                  combobox "产线2工序" [ref=119, loc=css:select[aria-label="产线2工序"]]
+                    text "涂装"
+                table_cell
+                  combobox "产线2状态" [ref=120, loc=css:select[aria-label="产线2状态"]]
+                    text "启用"
+              table_row
+                table_cell
+                  textbox "产线3编号" [ref=121, loc=css:input[aria-label="产线3编号"]]
+                    text "A_LINE"
+                table_cell
+                  combobox "产线3工序" [ref=122, loc=css:select[aria-label="产线3工序"]]
+                    text "总装"
+                table_cell
+                  combobox "产线3状态" [ref=123, loc=css:select[aria-label="产线3状态"]]
+                    text "启用"
+            button [ref=126]
+              text "新增产线"
+            text "当前模型每个工序仅支持1条启用产线、单资源加工。新增产线可先停用，替换时先停用旧线；不提供无效的并行能力输入。"
+          container
+            container [ref=127]
+              text "生产节拍（每车分钟）"
+            table
+              table_row
+                table_cell
+                  text "配置"
+                table_cell
+                  text "车型"
+                table_cell
+                  text "颜色"
+                table_cell
+                  text "工序"
+                table_cell
+                  text "节拍（分钟）"
+              table_row
+                table_cell
+                  text "SUV_WHITE"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "WHITE"
+                table_cell
+                  text "焊装"
+                table_cell
+                  spinbutton "SUV_WHITE 焊装节拍" [ref=128, loc=css:input[aria-label="SUV_WHITE 焊装节拍"]]
+                    text "-1"
+              table_row
+                table_cell
+                  text "SUV_WHITE"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "WHITE"
+                table_cell
+                  text "涂装"
+                table_cell
+                  spinbutton "SUV_WHITE 涂装节拍" [ref=129, loc=css:input[aria-label="SUV_WHITE 涂装节拍"]]
+                    text "35"
+              table_row
+                table_cell
+                  text "SUV_WHITE"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "WHITE"
+                table_cell
+                  text "总装"
+                table_cell
+                  spinbutton "SUV_WHITE 总装节拍" [ref=130, loc=css:input[aria-label="SUV_WHITE 总装节拍"]]
+                    text "25"
+              table_row
+                table_cell
+                  text "SUV_BLACK"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "BLACK"
+                table_cell
+                  text "焊装"
+                table_cell
+                  spinbutton "SUV_BLACK 焊装节拍" [ref=131, loc=css:input[aria-label="SUV_BLACK 焊装节拍"]]
+                    text "15"
+              table_row
+                table_cell
+                  text "SUV_BLACK"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "BLACK"
+                table_cell
+                  text "涂装"
+                table_cell
+                  spinbutton "SUV_BLACK 涂装节拍" [ref=132, loc=css:input[aria-label="SUV_BLACK 涂装节拍"]]
+                    text "35"
+              table_row
+                table_cell
+                  text "SUV_BLACK"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "BLACK"
+                table_cell
+                  text "总装"
+                table_cell
+                  spinbutton "SUV_BLACK 总装节拍" [ref=133, loc=css:input[aria-label="SUV_BLACK 总装节拍"]]
+                    text "25"
+              table_row
+                table_cell
+                  text "SEDAN_RED"
+                table_cell
+                  text "SEDAN"
+                table_cell
+                  text "RED"
+                table_cell
+                  text "焊装"
+                table_cell
+                  spinbutton "SEDAN_RED 焊装节拍" [ref=134, loc=css:input[aria-label="SEDAN_RED 焊装节拍"]]
+                    text "20"
+        container
+          button [ref=124]
+            text "保存新版本"
+          button [ref=125]
+            text "放弃修改"
+  status
+    text "SUV_WHITE 焊装节拍（分钟）须为不小于1的整数"
+
+拒绝负数
+[p1 "APS 计划与排程平台" | space "APS业务重构逐项页面验收"(7): 1 managed, 0 untracked — p1* "APS 计划与排程平台"]
+root
+  container
+    container "主导航"
+      container
+        text "APS"
+        container
+          text "计划与排程平台"
+          text "Advanced Planning & Scheduling"
+      container
+        anchor [ref=107, loc=href:/#/plans, url=http://127.0.0.1:18745/#/plans]
+          text "计划管理"
+        anchor [ref=108, loc=href:/#/rules, url=http://127.0.0.1:18745/#/rules]
+          text "基础数据"
+      container
+        text "演示服务已连接"
+        container
+          text "演示环境 · 未接入 ERP / MES"
+          text "提交不会产生生产指令"
+    container [ref=52]
+      container
+        container
+          container
+            table
+              table_row
+                table_cell
+                  textbox "产线2编号" [ref=118, loc=css:input[aria-label="产线2编号"]]
+                    text "P_LINE"
+                table_cell
+                  combobox "产线2工序" [ref=119, loc=css:select[aria-label="产线2工序"]]
+                    text "涂装"
+                table_cell
+                  combobox "产线2状态" [ref=120, loc=css:select[aria-label="产线2状态"]]
+                    text "启用"
+              table_row
+                table_cell
+                  textbox "产线3编号" [ref=121, loc=css:input[aria-label="产线3编号"]]
+                    text "A_LINE"
+                table_cell
+                  combobox "产线3工序" [ref=122, loc=css:select[aria-label="产线3工序"]]
+                    text "总装"
+                table_cell
+                  combobox "产线3状态" [ref=123, loc=css:select[aria-label="产线3状态"]]
+                    text "启用"
+            button [ref=126]
+              text "新增产线"
+            text "当前模型每个工序仅支持1条启用产线、单资源加工。新增产线可先停用，替换时先停用旧线；不提供无效的并行能力输入。"
+          container
+            container [ref=127]
+              text "生产节拍（每车分钟）"
+            table
+              table_row
+                table_cell
+                  text "配置"
+                table_cell
+                  text "车型"
+                table_cell
+                  text "颜色"
+                table_cell
+                  text "工序"
+                table_cell
+                  text "节拍（分钟）"
+              table_row
+                table_cell
+                  text "SUV_WHITE"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "WHITE"
+                table_cell
+                  text "焊装"
+                table_cell
+                  spinbutton "SUV_WHITE 焊装节拍" [ref=128, loc=css:input[aria-label="SUV_WHITE 焊装节拍"]]
+                    text "-1"
+              table_row
+                table_cell
+                  text "SUV_WHITE"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "WHITE"
+                table_cell
+                  text "涂装"
+                table_cell
+                  spinbutton "SUV_WHITE 涂装节拍" [ref=129, loc=css:input[aria-label="SUV_WHITE 涂装节拍"]]
+                    text "35"
+              table_row
+                table_cell
+                  text "SUV_WHITE"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "WHITE"
+                table_cell
+                  text "总装"
+                table_cell
+                  spinbutton "SUV_WHITE 总装节拍" [ref=130, loc=css:input[aria-label="SUV_WHITE 总装节拍"]]
+                    text "25"
+              table_row
+                table_cell
+                  text "SUV_BLACK"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "BLACK"
+                table_cell
+                  text "焊装"
+                table_cell
+                  spinbutton "SUV_BLACK 焊装节拍" [ref=131, loc=css:input[aria-label="SUV_BLACK 焊装节拍"]]
+                    text "15"
+              table_row
+                table_cell
+                  text "SUV_BLACK"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "BLACK"
+                table_cell
+                  text "涂装"
+                table_cell
+                  spinbutton "SUV_BLACK 涂装节拍" [ref=132, loc=css:input[aria-label="SUV_BLACK 涂装节拍"]]
+                    text "35"
+              table_row
+                table_cell
+                  text "SUV_BLACK"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "BLACK"
+                table_cell
+                  text "总装"
+                table_cell
+                  spinbutton "SUV_BLACK 总装节拍" [ref=133, loc=css:input[aria-label="SUV_BLACK 总装节拍"]]
+                    text "25"
+              table_row
+                table_cell
+                  text "SEDAN_RED"
+                table_cell
+                  text "SEDAN"
+                table_cell
+                  text "RED"
+                table_cell
+                  text "焊装"
+                table_cell
+                  spinbutton "SEDAN_RED 焊装节拍" [ref=134, loc=css:input[aria-label="SEDAN_RED 焊装节拍"]]
+                    text "20"
+        container
+          button [ref=124]
+            text "保存新版本"
+          button [ref=125]
+            text "放弃修改"
+  status
+    text "SUV_WHITE 焊装节拍（分钟）须为不小于1的整数"
+
+清空
+[p1 "APS 计划与排程平台" | space "APS业务重构逐项页面验收"(7): 1 managed, 0 untracked — p1* "APS 计划与排程平台"]
+root
+  container
+    container "主导航"
+      container
+        text "APS"
+        container
+          text "计划与排程平台"
+          text "Advanced Planning & Scheduling"
+      container
+        anchor [ref=107, loc=href:/#/plans, url=http://127.0.0.1:18745/#/plans]
+          text "计划管理"
+        anchor [ref=108, loc=href:/#/rules, url=http://127.0.0.1:18745/#/rules]
+          text "基础数据"
+      container
+        text "演示服务已连接"
+        container
+          text "演示环境 · 未接入 ERP / MES"
+          text "提交不会产生生产指令"
+    container [ref=52]
+      container
+        container
+          container
+            table
+              table_row
+                table_cell
+                  textbox "产线2编号" [ref=118, loc=css:input[aria-label="产线2编号"]]
+                    text "P_LINE"
+                table_cell
+                  combobox "产线2工序" [ref=119, loc=css:select[aria-label="产线2工序"]]
+                    text "涂装"
+                table_cell
+                  combobox "产线2状态" [ref=120, loc=css:select[aria-label="产线2状态"]]
+                    text "启用"
+              table_row
+                table_cell
+                  textbox "产线3编号" [ref=121, loc=css:input[aria-label="产线3编号"]]
+                    text "A_LINE"
+                table_cell
+                  combobox "产线3工序" [ref=122, loc=css:select[aria-label="产线3工序"]]
+                    text "总装"
+                table_cell
+                  combobox "产线3状态" [ref=123, loc=css:select[aria-label="产线3状态"]]
+                    text "启用"
+            button [ref=126]
+              text "新增产线"
+            text "当前模型每个工序仅支持1条启用产线、单资源加工。新增产线可先停用，替换时先停用旧线；不提供无效的并行能力输入。"
+          container
+            container [ref=127]
+              text "生产节拍（每车分钟）"
+            table
+              table_row
+                table_cell
+                  text "配置"
+                table_cell
+                  text "车型"
+                table_cell
+                  text "颜色"
+                table_cell
+                  text "工序"
+                table_cell
+                  text "节拍（分钟）"
+              table_row
+                table_cell
+                  text "SUV_WHITE"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "WHITE"
+                table_cell
+                  text "焊装"
+                table_cell
+                  spinbutton "SUV_WHITE 焊装节拍" [ref=128, loc=css:input[aria-label="SUV_WHITE 焊装节拍"]]
+              table_row
+                table_cell
+                  text "SUV_WHITE"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "WHITE"
+                table_cell
+                  text "涂装"
+                table_cell
+                  spinbutton "SUV_WHITE 涂装节拍" [ref=129, loc=css:input[aria-label="SUV_WHITE 涂装节拍"]]
+                    text "35"
+              table_row
+                table_cell
+                  text "SUV_WHITE"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "WHITE"
+                table_cell
+                  text "总装"
+                table_cell
+                  spinbutton "SUV_WHITE 总装节拍" [ref=130, loc=css:input[aria-label="SUV_WHITE 总装节拍"]]
+                    text "25"
+              table_row
+                table_cell
+                  text "SUV_BLACK"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "BLACK"
+                table_cell
+                  text "焊装"
+                table_cell
+                  spinbutton "SUV_BLACK 焊装节拍" [ref=131, loc=css:input[aria-label="SUV_BLACK 焊装节拍"]]
+                    text "15"
+              table_row
+                table_cell
+                  text "SUV_BLACK"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "BLACK"
+                table_cell
+                  text "涂装"
+                table_cell
+                  spinbutton "SUV_BLACK 涂装节拍" [ref=132, loc=css:input[aria-label="SUV_BLACK 涂装节拍"]]
+                    text "35"
+              table_row
+                table_cell
+                  text "SUV_BLACK"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "BLACK"
+                table_cell
+                  text "总装"
+                table_cell
+                  spinbutton "SUV_BLACK 总装节拍" [ref=133, loc=css:input[aria-label="SUV_BLACK 总装节拍"]]
+                    text "25"
+              table_row
+                table_cell
+                  text "SEDAN_RED"
+                table_cell
+                  text "SEDAN"
+                table_cell
+                  text "RED"
+                table_cell
+                  text "焊装"
+                table_cell
+                  spinbutton "SEDAN_RED 焊装节拍" [ref=134, loc=css:input[aria-label="SEDAN_RED 焊装节拍"]]
+                    text "20"
+        container
+          button [ref=124]
+            text "保存新版本"
+          button [ref=125]
+            text "放弃修改"
+  status
+    text "SUV_WHITE 焊装节拍（分钟）须为不小于1的整数"
+
+保存待完善版本
+[p1 "APS 计划与排程平台" | space "APS业务重构逐项页面验收"(7): 1 managed, 0 untracked — p1* "APS 计划与排程平台"]
+root
+  container
+    container "主导航"
+      container
+        text "APS"
+        container
+          text "计划与排程平台"
+          text "Advanced Planning & Scheduling"
+      container
+        anchor [ref=107, loc=href:/#/plans, url=http://127.0.0.1:18745/#/plans]
+          text "计划管理"
+        anchor [ref=108, loc=href:/#/rules, url=http://127.0.0.1:18745/#/rules]
+          text "基础数据"
+      container
+        text "演示服务已连接"
+        container
+          text "演示环境 · 未接入 ERP / MES"
+          text "提交不会产生生产指令"
+    container
+      container
+        text "APS"
+        text "基础数据"
+        text "工艺负责人 · F1 · F1 / FACTORY_1"
+        container
+          text "模拟身份"
+          combobox "模拟身份" [ref=50, loc=css:select[aria-label="模拟身份"]]
+            text "工艺负责人 · F1"
+        button [ref=51]
+          text "刷新"
+      container [ref=52]
+        heading
+          text "基础数据"
+        paragraph
+          text "工艺负责人维护，计划引用版本；保存不会悄悄覆盖历史计划。"
+        text "当前可维护演示基础资料。真实企业参数须另行确认，不能直接用于生产。"
+        container
+          text "资料范围"
+          combobox [ref=135]
+            text "F1 · 正常生产 · 12辆基准"
+        container
+          heading
+            text "版本 2 · F1"
+          paragraph
+            text "来源：显式加载的演示场景。更新人：工艺负责人 · F1 · 2026-09-18T17:49:31+00:00"
+          text "SUV_WHITE缺少焊装有效节拍"
+          container
+            container
+              container [ref=136]
+                text "产线资源"
+              container
+                table
+                  table_row
+                    table_cell
+                      text "编号"
+                    table_cell
+                      text "工序"
+                    table_cell
+                      text "状态"
+                  table_row
+                    table_cell
+                      textbox "产线1编号" [ref=137, loc=css:input[aria-label="产线1编号"]]
+                        text "W_LINE"
+                    table_cell
+                      combobox "产线1工序" [ref=138, loc=css:select[aria-label="产线1工序"]]
+                        text "焊装"
+                    table_cell
+                      combobox "产线1状态" [ref=139, loc=css:select[aria-label="产线1状态"]]
+                        text "启用"
+                  table_row
+                    table_cell
+                      textbox "产线2编号" [ref=140, loc=css:input[aria-label="产线2编号"]]
+                        text "P_LINE"
+                    table_cell
+                      combobox "产线2工序" [ref=141, loc=css:select[aria-label="产线2工序"]]
+                        text "涂装"
+                    table_cell
+                      combobox "产线2状态" [ref=142, loc=css:select[aria-label="产线2状态"]]
+                        text "启用"
+                  table_row
+                    table_cell
+                      textbox "产线3编号" [ref=143, loc=css:input[aria-label="产线3编号"]]
+                        text "A_LINE"
+                    table_cell
+                      combobox "产线3工序" [ref=144, loc=css:select[aria-label="产线3工序"]]
+                        text "总装"
+                    table_cell
+                      combobox "产线3状态" [ref=145, loc=css:select[aria-label="产线3状态"]]
+                        text "启用"
+                button [ref=146]
+                  text "新增产线"
+                text "当前模型每个工序仅支持1条启用产线、单资源加工。新增产线可先停用，替换时先停用旧线；不提供无效的并行能力输入。"
+            container
+              container [ref=147]
+                text "生产节拍（每车分钟）"
+              table
+                table_row
+                  table_cell
+                    text "配置"
+                  table_cell
+                    text "车型"
+                  table_cell
+                    text "颜色"
+                  table_cell
+                    text "工序"
+                  table_cell
+                    text "节拍（分钟）"
+                table_row
+                  table_cell
+                    text "SUV_WHITE"
+                  table_cell
+                    text "SUV"
+                  table_cell
+                    text "WHITE"
+                  table_cell
+                    text "焊装"
+                  table_cell
+                    spinbutton "SUV_WHITE 焊装节拍" [ref=148, loc=css:input[aria-label="SUV_WHITE 焊装节拍"]]
+                table_row
+                  table_cell
+                    text "SUV_WHITE"
+                  table_cell
+                    text "SUV"
+                  table_cell
+                    text "WHITE"
+                  table_cell
+                    text "涂装"
+                  table_cell
+                    spinbutton "SUV_WHITE 涂装节拍" [ref=149, loc=css:input[aria-label="SUV_WHITE 涂装节拍"]]
+                      text "35"
+                table_row
+                  table_cell
+                    text "SUV_WHITE"
+                  table_cell
+                    text "SUV"
+                  table_cell
+                    text "WHITE"
+                  table_cell
+                    text "总装"
+                  table_cell
+                    spinbutton "SUV_WHITE 总装节拍" [ref=150, loc=css:input[aria-label="SUV_WHITE 总装节拍"]]
+                      text "25"
+                table_row
+                  table_cell
+                    text "SUV_BLACK"
+                  table_cell
+                    text "SUV"
+                  table_cell
+                    text "BLACK"
+                  table_cell
+                    text "焊装"
+                  table_cell
+                    spinbutton "SUV_BLACK 焊装节拍" [ref=151, loc=css:input[aria-label="SUV_BLACK 焊装节拍"]]
+                      text "15"
+                table_row
+                  table_cell
+                    text "SUV_BLACK"
+                  table_cell
+                    text "SUV"
+                  table_cell
+                    text "BLACK"
+                  table_cell
+                    text "涂装"
+                  table_cell
+                    spinbutton "SUV_BLACK 涂装节拍" [ref=152, loc=css:input[aria-label="SUV_BLACK 涂装节拍"]]
+                      text "35"
+                table_row
+                  table_cell
+                    text "SUV_BLACK"
+                  table_cell
+                    text "SUV"
+                  table_cell
+                    text "BLACK"
+                  table_cell
+                    text "总装"
+                  table_cell
+                    spinbutton "SUV_BLACK 总装节拍" [ref=153, loc=css:input[aria-label="SUV_BLACK 总装节拍"]]
+                      text "25"
+                table_row
+                  table_cell
+                    text "SEDAN_RED"
+                  table_cell
+                    text "SEDAN"
+                  table_cell
+                    text "RED"
+                  table_cell
+                    text "焊装"
+                  table_cell
+                    spinbutton "SEDAN_RED 焊装节拍" [ref=154, loc=css:input[aria-label="SEDAN_RED 焊装节拍"]]
+                      text "20"
+                table_row
+                  table_cell
+                    text "SEDAN_RED"
+                  table_cell
+                    text "SEDAN"
+                  table_cell
+                    text "RED"
+                  table_cell
+                    text "涂装"
+                  table_cell
+                    spinbutton "SEDAN_RED 涂装节拍" [ref=155, loc=css:input[aria-label="SEDAN_RED 涂装节拍"]]
+                      text "35"
+                table_row
+                  table_cell
+                    text "SEDAN_RED"
+                  table_cell
+                    text "SEDAN"
+                  table_cell
+                    text "RED"
+                  table_cell
+                    text "总装"
+                  table_cell
+                    spinbutton "SEDAN_RED 总装节拍" [ref=156, loc=css:input[aria-label="SEDAN_RED 总装节拍"]]
+                      text "30"
+                table_row
+                  table_cell
+                    text "PULLOUT_CAR"
+                  table_cell
+                    text "SUV"
+                  table_cell
+                    text "WHITE"
+                  table_cell
+                    text "焊装"
+                  table_cell
+                    spinbutton "PULLOUT_CAR 焊装节拍" [ref=157, loc=css:input[aria-label="PULLOUT_CAR 焊装节拍"]]
+                      text "15"
+                table_row
+                  table_cell
+                    text "PULLOUT_CAR"
+                  table_cell
+                    text "SUV"
+                  table_cell
+                    text "WHITE"
+                  table_cell
+                    text "涂装"
+                  table_cell
+                    spinbutton "PULLOUT_CAR 涂装节拍" [ref=158, loc=css:input[aria-label="PULLOUT_CAR 涂装节拍"]]
+                      text "30"
+            container [ref=159]
+              text "生产日历"
+            table
+              table_row
+                table_cell
+                  text "班次"
+                table_cell
+                  text "第几天"
+                table_cell
+                  text "当日开始分钟"
+                table_cell
+                  text "当日结束分钟"
+              table_row
+                table_cell
+                  text "D0_S1"
+                table_cell
+                  spinbutton "班次1日期" [ref=160, loc=css:input[aria-label="班次1日期"]]
+                    text "1"
+                table_cell
+                  spinbutton "班次1开始" [ref=161, loc=css:input[aria-label="班次1开始"]]
+                    text "0"
+                table_cell
+                  spinbutton "班次1结束" [ref=162, loc=css:input[aria-label="班次1结束"]]
+                    text "480"
+              table_row
+                table_cell
+                  text "D1_S1"
+                table_cell
+                  spinbutton "班次2日期" [ref=163, loc=css:input[aria-label="班次2日期"]]
+                    text "2"
+                table_cell
+                  spinbutton "班次2开始" [ref=164, loc=css:input[aria-label="班次2开始"]]
+                    text "0"
+                table_cell
+                  spinbutton "班次2结束" [ref=165, loc=css:input[aria-label="班次2结束"]]
+                    text "480"
+              table_row
+                table_cell
+                  text "D2_S1"
+                table_cell
+                  spinbutton "班次3日期" [ref=166, loc=css:input[aria-label="班次3日期"]]
+                    text "3"
+                table_cell
+                  spinbutton "班次3开始" [ref=167, loc=css:input[aria-label="班次3开始"]]
+                    text "0"
+                table_cell
+                  spinbutton "班次3结束" [ref=168, loc=css:input[aria-label="班次3结束"]]
+                    text "480"
+            container [ref=169]
+              text "工序衔接"
+            table
+              table_row
+                table_cell
+                  text "缓冲区"
+                table_cell
+                  text "起点 → 终点"
+                table_cell
+                  text "缓冲容量（辆）"
+                table_cell
+                  text "固定转运（分钟）"
+              table_row
+                table_cell
+                  text "BUF_WP"
+                table_cell
+                  text "W->P"
+                table_cell
+                  spinbutton "BUF_WP缓冲容量" [ref=170, loc=css:input[aria-label="BUF_WP缓冲容量"]]
+                    text "2"
+                table_cell
+                  spinbutton "BUF_WP转运分钟" [ref=171, loc=css:input[aria-label="BUF_WP转运分钟"]]
+                    text "2"
+              table_row
+                table_cell
+                  text "BUF_PA"
+                table_cell
+                  text "P->A"
+                table_cell
+                  spinbutton "BUF_PA缓冲容量" [ref=172, loc=css:input[aria-label="BUF_PA缓冲容量"]]
+                    text "2"
+                table_cell
+                  spinbutton "BUF_PA转运分钟" [ref=173, loc=css:input[aria-label="BUF_PA转运分钟"]]
+                    text "2"
+            container [ref=174]
+              text "切换规则（演示假设）"
+            table
+              table_row
+                table_cell
+                  text "配置"
+                table_cell
+                  text "工序"
+                table_cell
+                  text "前值 → 后值"
+                table_cell
+                  text "准备分钟"
+              table_row
+                table_cell
+                  text "SUV_WHITE"
+                table_cell
+                  text "焊装"
+                table_cell
+                  text "SUV->SEDAN"
+                table_cell
+                  spinbutton "SUV_WHITE W SUV->SEDAN切换分钟" [ref=175, loc=css:input[aria-label="SUV_WHITE W SUV->SEDAN切换分钟"]]
+                    text "5"
+              table_row
+                table_cell
+                  text "SUV_WHITE"
+                table_cell
+                  text "焊装"
+                table_cell
+                  text "SEDAN->SUV"
+                table_cell
+                  spinbutton "SUV_WHITE W SEDAN->SUV切换分钟" [ref=176, loc=css:input[aria-label="SUV_WHITE W SEDAN->SUV切换分钟"]]
+                    text "5"
+              table_row
+                table_cell
+                  text "SUV_WHITE"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "WHITE->BLACK"
+                table_cell
+                  spinbutton "SUV_WHITE P WHITE->BLACK切换分钟" [ref=177, loc=css:input[aria-label="SUV_WHITE P WHITE->BLACK切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "SUV_WHITE"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "WHITE->RED"
+                table_cell
+                  spinbutton "SUV_WHITE P WHITE->RED切换分钟" [ref=178, loc=css:input[aria-label="SUV_WHITE P WHITE->RED切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "SUV_WHITE"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "WHITE->BLUE"
+                table_cell
+                  spinbutton "SUV_WHITE P WHITE->BLUE切换分钟" [ref=179, loc=css:input[aria-label="SUV_WHITE P WHITE->BLUE切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "SUV_WHITE"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "WHITE->SILVER"
+                table_cell
+                  spinbutton "SUV_WHITE P WHITE->SILVER切换分钟" [ref=180, loc=css:input[aria-label="SUV_WHITE P WHITE->SILVER切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "SUV_WHITE"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "BLACK->WHITE"
+                table_cell
+                  spinbutton "SUV_WHITE P BLACK->WHITE切换分钟" [ref=181, loc=css:input[aria-label="SUV_WHITE P BLACK->WHITE切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "SUV_WHITE"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "BLACK->RED"
+                table_cell
+                  spinbutton "SUV_WHITE P BLACK->RED切换分钟" [ref=182, loc=css:input[aria-label="SUV_WHITE P BLACK->RED切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "SUV_WHITE"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "BLACK->BLUE"
+                table_cell
+                  spinbutton "SUV_WHITE P BLACK->BLUE切换分钟" [ref=183, loc=css:input[aria-label="SUV_WHITE P BLACK->BLUE切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "SUV_WHITE"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "BLACK->SILVER"
+                table_cell
+                  spinbutton "SUV_WHITE P BLACK->SILVER切换分钟" [ref=184, loc=css:input[aria-label="SUV_WHITE P BLACK->SILVER切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "SUV_WHITE"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "RED->WHITE"
+                table_cell
+                  spinbutton "SUV_WHITE P RED->WHITE切换分钟" [ref=185, loc=css:input[aria-label="SUV_WHITE P RED->WHITE切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "SUV_WHITE"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "RED->BLACK"
+                table_cell
+                  spinbutton "SUV_WHITE P RED->BLACK切换分钟" [ref=186, loc=css:input[aria-label="SUV_WHITE P RED->BLACK切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "SUV_WHITE"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "RED->BLUE"
+                table_cell
+                  spinbutton "SUV_WHITE P RED->BLUE切换分钟" [ref=187, loc=css:input[aria-label="SUV_WHITE P RED->BLUE切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "SUV_WHITE"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "RED->SILVER"
+                table_cell
+                  spinbutton "SUV_WHITE P RED->SILVER切换分钟" [ref=188, loc=css:input[aria-label="SUV_WHITE P RED->SILVER切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "SUV_WHITE"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "BLUE->WHITE"
+                table_cell
+                  spinbutton "SUV_WHITE P BLUE->WHITE切换分钟" [ref=189, loc=css:input[aria-label="SUV_WHITE P BLUE->WHITE切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "SUV_WHITE"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "BLUE->BLACK"
+                table_cell
+                  spinbutton "SUV_WHITE P BLUE->BLACK切换分钟" [ref=190, loc=css:input[aria-label="SUV_WHITE P BLUE->BLACK切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "SUV_WHITE"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "BLUE->RED"
+                table_cell
+                  spinbutton "SUV_WHITE P BLUE->RED切换分钟" [ref=191, loc=css:input[aria-label="SUV_WHITE P BLUE->RED切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "SUV_WHITE"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "BLUE->SILVER"
+                table_cell
+                  spinbutton "SUV_WHITE P BLUE->SILVER切换分钟" [ref=192, loc=css:input[aria-label="SUV_WHITE P BLUE->SILVER切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "SUV_WHITE"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "SILVER->WHITE"
+                table_cell
+                  spinbutton "SUV_WHITE P SILVER->WHITE切换分钟" [ref=193, loc=css:input[aria-label="SUV_WHITE P SILVER->WHITE切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "SUV_WHITE"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "SILVER->BLACK"
+                table_cell
+                  spinbutton "SUV_WHITE P SILVER->BLACK切换分钟" [ref=194, loc=css:input[aria-label="SUV_WHITE P SILVER->BLACK切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "SUV_WHITE"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "SILVER->RED"
+                table_cell
+                  spinbutton "SUV_WHITE P SILVER->RED切换分钟" [ref=195, loc=css:input[aria-label="SUV_WHITE P SILVER->RED切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "SUV_WHITE"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "SILVER->BLUE"
+                table_cell
+                  spinbutton "SUV_WHITE P SILVER->BLUE切换分钟" [ref=196, loc=css:input[aria-label="SUV_WHITE P SILVER->BLUE切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "SUV_BLACK"
+                table_cell
+                  text "焊装"
+                table_cell
+                  text "SUV->SEDAN"
+                table_cell
+                  spinbutton "SUV_BLACK W SUV->SEDAN切换分钟" [ref=197, loc=css:input[aria-label="SUV_BLACK W SUV->SEDAN切换分钟"]]
+                    text "5"
+              table_row
+                table_cell
+                  text "SUV_BLACK"
+                table_cell
+                  text "焊装"
+                table_cell
+                  text "SEDAN->SUV"
+                table_cell
+                  spinbutton "SUV_BLACK W SEDAN->SUV切换分钟" [ref=198, loc=css:input[aria-label="SUV_BLACK W SEDAN->SUV切换分钟"]]
+                    text "5"
+              table_row
+                table_cell
+                  text "SUV_BLACK"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "WHITE->BLACK"
+                table_cell
+                  spinbutton "SUV_BLACK P WHITE->BLACK切换分钟" [ref=199, loc=css:input[aria-label="SUV_BLACK P WHITE->BLACK切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "SUV_BLACK"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "WHITE->RED"
+                table_cell
+                  spinbutton "SUV_BLACK P WHITE->RED切换分钟" [ref=200, loc=css:input[aria-label="SUV_BLACK P WHITE->RED切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "SUV_BLACK"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "WHITE->BLUE"
+                table_cell
+                  spinbutton "SUV_BLACK P WHITE->BLUE切换分钟" [ref=201, loc=css:input[aria-label="SUV_BLACK P WHITE->BLUE切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "SUV_BLACK"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "WHITE->SILVER"
+                table_cell
+                  spinbutton "SUV_BLACK P WHITE->SILVER切换分钟" [ref=202, loc=css:input[aria-label="SUV_BLACK P WHITE->SILVER切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "SUV_BLACK"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "BLACK->WHITE"
+                table_cell
+                  spinbutton "SUV_BLACK P BLACK->WHITE切换分钟" [ref=203, loc=css:input[aria-label="SUV_BLACK P BLACK->WHITE切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "SUV_BLACK"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "BLACK->RED"
+                table_cell
+                  spinbutton "SUV_BLACK P BLACK->RED切换分钟" [ref=204, loc=css:input[aria-label="SUV_BLACK P BLACK->RED切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "SUV_BLACK"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "BLACK->BLUE"
+                table_cell
+                  spinbutton "SUV_BLACK P BLACK->BLUE切换分钟" [ref=205, loc=css:input[aria-label="SUV_BLACK P BLACK->BLUE切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "SUV_BLACK"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "BLACK->SILVER"
+                table_cell
+                  spinbutton "SUV_BLACK P BLACK->SILVER切换分钟" [ref=206, loc=css:input[aria-label="SUV_BLACK P BLACK->SILVER切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "SUV_BLACK"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "RED->WHITE"
+                table_cell
+                  spinbutton "SUV_BLACK P RED->WHITE切换分钟" [ref=207, loc=css:input[aria-label="SUV_BLACK P RED->WHITE切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "SUV_BLACK"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "RED->BLACK"
+                table_cell
+                  spinbutton "SUV_BLACK P RED->BLACK切换分钟" [ref=208, loc=css:input[aria-label="SUV_BLACK P RED->BLACK切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "SUV_BLACK"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "RED->BLUE"
+                table_cell
+                  spinbutton "SUV_BLACK P RED->BLUE切换分钟" [ref=209, loc=css:input[aria-label="SUV_BLACK P RED->BLUE切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "SUV_BLACK"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "RED->SILVER"
+                table_cell
+                  spinbutton "SUV_BLACK P RED->SILVER切换分钟" [ref=210, loc=css:input[aria-label="SUV_BLACK P RED->SILVER切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "SUV_BLACK"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "BLUE->WHITE"
+                table_cell
+                  spinbutton "SUV_BLACK P BLUE->WHITE切换分钟" [ref=211, loc=css:input[aria-label="SUV_BLACK P BLUE->WHITE切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "SUV_BLACK"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "BLUE->BLACK"
+                table_cell
+                  spinbutton "SUV_BLACK P BLUE->BLACK切换分钟" [ref=212, loc=css:input[aria-label="SUV_BLACK P BLUE->BLACK切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "SUV_BLACK"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "BLUE->RED"
+                table_cell
+                  spinbutton "SUV_BLACK P BLUE->RED切换分钟" [ref=213, loc=css:input[aria-label="SUV_BLACK P BLUE->RED切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "SUV_BLACK"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "BLUE->SILVER"
+                table_cell
+                  spinbutton "SUV_BLACK P BLUE->SILVER切换分钟" [ref=214, loc=css:input[aria-label="SUV_BLACK P BLUE->SILVER切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "SUV_BLACK"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "SILVER->WHITE"
+                table_cell
+                  spinbutton "SUV_BLACK P SILVER->WHITE切换分钟" [ref=215, loc=css:input[aria-label="SUV_BLACK P SILVER->WHITE切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "SUV_BLACK"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "SILVER->BLACK"
+                table_cell
+                  spinbutton "SUV_BLACK P SILVER->BLACK切换分钟" [ref=216, loc=css:input[aria-label="SUV_BLACK P SILVER->BLACK切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "SUV_BLACK"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "SILVER->RED"
+                table_cell
+                  spinbutton "SUV_BLACK P SILVER->RED切换分钟" [ref=217, loc=css:input[aria-label="SUV_BLACK P SILVER->RED切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "SUV_BLACK"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "SILVER->BLUE"
+                table_cell
+                  spinbutton "SUV_BLACK P SILVER->BLUE切换分钟" [ref=218, loc=css:input[aria-label="SUV_BLACK P SILVER->BLUE切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "SEDAN_RED"
+                table_cell
+                  text "焊装"
+                table_cell
+                  text "SUV->SEDAN"
+                table_cell
+                  spinbutton "SEDAN_RED W SUV->SEDAN切换分钟" [ref=219, loc=css:input[aria-label="SEDAN_RED W SUV->SEDAN切换分钟"]]
+                    text "5"
+              table_row
+                table_cell
+                  text "SEDAN_RED"
+                table_cell
+                  text "焊装"
+                table_cell
+                  text "SEDAN->SUV"
+                table_cell
+                  spinbutton "SEDAN_RED W SEDAN->SUV切换分钟" [ref=220, loc=css:input[aria-label="SEDAN_RED W SEDAN->SUV切换分钟"]]
+                    text "5"
+              table_row
+                table_cell
+                  text "SEDAN_RED"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "WHITE->BLACK"
+                table_cell
+                  spinbutton "SEDAN_RED P WHITE->BLACK切换分钟" [ref=221, loc=css:input[aria-label="SEDAN_RED P WHITE->BLACK切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "SEDAN_RED"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "WHITE->RED"
+                table_cell
+                  spinbutton "SEDAN_RED P WHITE->RED切换分钟" [ref=222, loc=css:input[aria-label="SEDAN_RED P WHITE->RED切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "SEDAN_RED"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "WHITE->BLUE"
+                table_cell
+                  spinbutton "SEDAN_RED P WHITE->BLUE切换分钟" [ref=223, loc=css:input[aria-label="SEDAN_RED P WHITE->BLUE切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "SEDAN_RED"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "WHITE->SILVER"
+                table_cell
+                  spinbutton "SEDAN_RED P WHITE->SILVER切换分钟" [ref=224, loc=css:input[aria-label="SEDAN_RED P WHITE->SILVER切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "SEDAN_RED"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "BLACK->WHITE"
+                table_cell
+                  spinbutton "SEDAN_RED P BLACK->WHITE切换分钟" [ref=225, loc=css:input[aria-label="SEDAN_RED P BLACK->WHITE切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "SEDAN_RED"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "BLACK->RED"
+                table_cell
+                  spinbutton "SEDAN_RED P BLACK->RED切换分钟" [ref=226, loc=css:input[aria-label="SEDAN_RED P BLACK->RED切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "SEDAN_RED"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "BLACK->BLUE"
+                table_cell
+                  spinbutton "SEDAN_RED P BLACK->BLUE切换分钟" [ref=227, loc=css:input[aria-label="SEDAN_RED P BLACK->BLUE切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "SEDAN_RED"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "BLACK->SILVER"
+                table_cell
+                  spinbutton "SEDAN_RED P BLACK->SILVER切换分钟" [ref=228, loc=css:input[aria-label="SEDAN_RED P BLACK->SILVER切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "SEDAN_RED"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "RED->WHITE"
+                table_cell
+                  spinbutton "SEDAN_RED P RED->WHITE切换分钟" [ref=229, loc=css:input[aria-label="SEDAN_RED P RED->WHITE切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "SEDAN_RED"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "RED->BLACK"
+                table_cell
+                  spinbutton "SEDAN_RED P RED->BLACK切换分钟" [ref=230, loc=css:input[aria-label="SEDAN_RED P RED->BLACK切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "SEDAN_RED"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "RED->BLUE"
+                table_cell
+                  spinbutton "SEDAN_RED P RED->BLUE切换分钟" [ref=231, loc=css:input[aria-label="SEDAN_RED P RED->BLUE切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "SEDAN_RED"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "RED->SILVER"
+                table_cell
+                  spinbutton "SEDAN_RED P RED->SILVER切换分钟" [ref=232, loc=css:input[aria-label="SEDAN_RED P RED->SILVER切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "SEDAN_RED"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "BLUE->WHITE"
+                table_cell
+                  spinbutton "SEDAN_RED P BLUE->WHITE切换分钟" [ref=233, loc=css:input[aria-label="SEDAN_RED P BLUE->WHITE切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "SEDAN_RED"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "BLUE->BLACK"
+                table_cell
+                  spinbutton "SEDAN_RED P BLUE->BLACK切换分钟" [ref=234, loc=css:input[aria-label="SEDAN_RED P BLUE->BLACK切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "SEDAN_RED"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "BLUE->RED"
+                table_cell
+                  spinbutton "SEDAN_RED P BLUE->RED切换分钟" [ref=235, loc=css:input[aria-label="SEDAN_RED P BLUE->RED切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "SEDAN_RED"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "BLUE->SILVER"
+                table_cell
+                  spinbutton "SEDAN_RED P BLUE->SILVER切换分钟" [ref=236, loc=css:input[aria-label="SEDAN_RED P BLUE->SILVER切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "SEDAN_RED"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "SILVER->WHITE"
+                table_cell
+                  spinbutton "SEDAN_RED P SILVER->WHITE切换分钟" [ref=237, loc=css:input[aria-label="SEDAN_RED P SILVER->WHITE切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "SEDAN_RED"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "SILVER->BLACK"
+                table_cell
+                  spinbutton "SEDAN_RED P SILVER->BLACK切换分钟" [ref=238, loc=css:input[aria-label="SEDAN_RED P SILVER->BLACK切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "SEDAN_RED"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "SILVER->RED"
+                table_cell
+                  spinbutton "SEDAN_RED P SILVER->RED切换分钟" [ref=239, loc=css:input[aria-label="SEDAN_RED P SILVER->RED切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "SEDAN_RED"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "SILVER->BLUE"
+                table_cell
+                  spinbutton "SEDAN_RED P SILVER->BLUE切换分钟" [ref=240, loc=css:input[aria-label="SEDAN_RED P SILVER->BLUE切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "PULLOUT_CAR"
+                table_cell
+                  text "焊装"
+                table_cell
+                  text "SUV->SEDAN"
+                table_cell
+                  spinbutton "PULLOUT_CAR W SUV->SEDAN切换分钟" [ref=241, loc=css:input[aria-label="PULLOUT_CAR W SUV->SEDAN切换分钟"]]
+                    text "5"
+              table_row
+                table_cell
+                  text "PULLOUT_CAR"
+                table_cell
+                  text "焊装"
+                table_cell
+                  text "SEDAN->SUV"
+                table_cell
+                  spinbutton "PULLOUT_CAR W SEDAN->SUV切换分钟" [ref=242, loc=css:input[aria-label="PULLOUT_CAR W SEDAN->SUV切换分钟"]]
+                    text "5"
+              table_row
+                table_cell
+                  text "PULLOUT_CAR"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "WHITE->BLACK"
+                table_cell
+                  spinbutton "PULLOUT_CAR P WHITE->BLACK切换分钟" [ref=243, loc=css:input[aria-label="PULLOUT_CAR P WHITE->BLACK切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "PULLOUT_CAR"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "WHITE->RED"
+                table_cell
+                  spinbutton "PULLOUT_CAR P WHITE->RED切换分钟" [ref=244, loc=css:input[aria-label="PULLOUT_CAR P WHITE->RED切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "PULLOUT_CAR"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "WHITE->BLUE"
+                table_cell
+                  spinbutton "PULLOUT_CAR P WHITE->BLUE切换分钟" [ref=245, loc=css:input[aria-label="PULLOUT_CAR P WHITE->BLUE切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "PULLOUT_CAR"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "WHITE->SILVER"
+                table_cell
+                  spinbutton "PULLOUT_CAR P WHITE->SILVER切换分钟" [ref=246, loc=css:input[aria-label="PULLOUT_CAR P WHITE->SILVER切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "PULLOUT_CAR"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "BLACK->WHITE"
+                table_cell
+                  spinbutton "PULLOUT_CAR P BLACK->WHITE切换分钟" [ref=247, loc=css:input[aria-label="PULLOUT_CAR P BLACK->WHITE切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "PULLOUT_CAR"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "BLACK->RED"
+                table_cell
+                  spinbutton "PULLOUT_CAR P BLACK->RED切换分钟" [ref=248, loc=css:input[aria-label="PULLOUT_CAR P BLACK->RED切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "PULLOUT_CAR"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "BLACK->BLUE"
+                table_cell
+                  spinbutton "PULLOUT_CAR P BLACK->BLUE切换分钟" [ref=249, loc=css:input[aria-label="PULLOUT_CAR P BLACK->BLUE切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "PULLOUT_CAR"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "BLACK->SILVER"
+                table_cell
+                  spinbutton "PULLOUT_CAR P BLACK->SILVER切换分钟" [ref=250, loc=css:input[aria-label="PULLOUT_CAR P BLACK->SILVER切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "PULLOUT_CAR"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "RED->WHITE"
+                table_cell
+                  spinbutton "PULLOUT_CAR P RED->WHITE切换分钟" [ref=251, loc=css:input[aria-label="PULLOUT_CAR P RED->WHITE切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "PULLOUT_CAR"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "RED->BLACK"
+                table_cell
+                  spinbutton "PULLOUT_CAR P RED->BLACK切换分钟" [ref=252, loc=css:input[aria-label="PULLOUT_CAR P RED->BLACK切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "PULLOUT_CAR"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "RED->BLUE"
+                table_cell
+                  spinbutton "PULLOUT_CAR P RED->BLUE切换分钟" [ref=253, loc=css:input[aria-label="PULLOUT_CAR P RED->BLUE切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "PULLOUT_CAR"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "RED->SILVER"
+                table_cell
+                  spinbutton "PULLOUT_CAR P RED->SILVER切换分钟" [ref=254, loc=css:input[aria-label="PULLOUT_CAR P RED->SILVER切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "PULLOUT_CAR"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "BLUE->WHITE"
+                table_cell
+                  spinbutton "PULLOUT_CAR P BLUE->WHITE切换分钟" [ref=255, loc=css:input[aria-label="PULLOUT_CAR P BLUE->WHITE切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "PULLOUT_CAR"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "BLUE->BLACK"
+                table_cell
+                  spinbutton "PULLOUT_CAR P BLUE->BLACK切换分钟" [ref=256, loc=css:input[aria-label="PULLOUT_CAR P BLUE->BLACK切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "PULLOUT_CAR"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "BLUE->RED"
+                table_cell
+                  spinbutton "PULLOUT_CAR P BLUE->RED切换分钟" [ref=257, loc=css:input[aria-label="PULLOUT_CAR P BLUE->RED切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "PULLOUT_CAR"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "BLUE->SILVER"
+                table_cell
+                  spinbutton "PULLOUT_CAR P BLUE->SILVER切换分钟" [ref=258, loc=css:input[aria-label="PULLOUT_CAR P BLUE->SILVER切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "PULLOUT_CAR"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "SILVER->WHITE"
+                table_cell
+                  spinbutton "PULLOUT_CAR P SILVER->WHITE切换分钟" [ref=259, loc=css:input[aria-label="PULLOUT_CAR P SILVER->WHITE切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "PULLOUT_CAR"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "SILVER->BLACK"
+                table_cell
+                  spinbutton "PULLOUT_CAR P SILVER->BLACK切换分钟" [ref=260, loc=css:input[aria-label="PULLOUT_CAR P SILVER->BLACK切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "PULLOUT_CAR"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "SILVER->RED"
+                table_cell
+                  spinbutton "PULLOUT_CAR P SILVER->RED切换分钟" [ref=261, loc=css:input[aria-label="PULLOUT_CAR P SILVER->RED切换分钟"]]
+                    text "10"
+              table_row
+                table_cell
+                  text "PULLOUT_CAR"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "SILVER->BLUE"
+                table_cell
+                  spinbutton "PULLOUT_CAR P SILVER->BLUE切换分钟" [ref=262, loc=css:input[aria-label="PULLOUT_CAR P SILVER->BLUE切换分钟"]]
+                    text "10"
+          container
+            button [ref=263]
+              text "保存新版本"
+            button [ref=264]
+              text "放弃修改"
+      text "APS 计划平台 · 演示环境：数据来自本机后端服务，未接入生产系统；角色为模拟身份，非生产鉴权。"
+  status
+    text "已保存基础资料版本 2。现有计划需显式引用。"

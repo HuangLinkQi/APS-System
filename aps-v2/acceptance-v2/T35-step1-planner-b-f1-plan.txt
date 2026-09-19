@@ -1,0 +1,39 @@
+[p1 "APS 计划与排程平台" | space "APS业务重构逐项页面验收"(7): 1 managed, 0 untracked — p1* "APS 计划与排程平台"]
+root
+  container "主导航"
+    container
+      text "APS"
+      container
+        text "计划与排程平台"
+        text "Advanced Planning & Scheduling"
+    container
+      anchor [ref=1334, url=http://127.0.0.1:18745/#/plans]
+        text "计划管理"
+      anchor [ref=1335, loc=href:/#/rules, url=http://127.0.0.1:18745/#/rules]
+        text "基础数据"
+    container
+      text "演示服务已连接"
+      container
+        text "演示环境 · 未接入 ERP / MES"
+        text "提交不会产生生产指令"
+  container
+    container
+      container
+        text "APS"
+        text "排程工作台"
+      container
+        text "计划员 B · F2 · F2 / FACTORY_2"
+        container
+          text "模拟身份"
+          combobox "模拟身份" [ref=1034, loc=css:select[aria-label="模拟身份"]]
+            text "计划员 B · F2"
+        button [ref=1035]
+          text "刷新"
+    container [ref=1036]
+      container
+        heading
+          text "无法打开"
+        text "记录不存在或不在授权范围"
+        anchor [ref=1336, url=http://127.0.0.1:18745/#/plans]
+          text "返回可用入口"
+    text "APS 计划平台 · 演示环境：数据来自本机后端服务，未接入生产系统；角色为模拟身份，非生产鉴权。"

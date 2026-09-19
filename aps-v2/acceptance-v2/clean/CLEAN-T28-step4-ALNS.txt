@@ -1,0 +1,216 @@
+[p1 "APS 计划与排程平台" | space "APS业务重构逐项页面验收"(7): 1 managed, 0 untracked — p1* "APS 计划与排程平台"]
+root
+  container "主导航"
+    container
+      text "APS"
+      container
+        text "计划与排程平台"
+        text "Advanced Planning & Scheduling"
+    container
+      anchor [ref=2318, url=http://127.0.0.1:18745/#/plans]
+        text "计划管理"
+      anchor [ref=2319, loc=href:/#/rules, url=http://127.0.0.1:18745/#/rules]
+        text "基础数据"
+    container
+      text "演示服务已连接"
+      container
+        text "演示环境 · 未接入 ERP / MES"
+        text "提交不会产生生产指令"
+  container [ref=2176]
+    container
+      container
+        button [ref=2327]
+          text "交期优先"
+        button [ref=2328]
+          text "颜色集中"
+        button [ref=2329]
+          text "负荷均衡"
+        button [ref=2330]
+          text "综合优化"
+      container
+        heading
+          text "综合优化"
+        container
+          container
+            text "未完成订单"
+            text "0"
+            text "台（未排0+已排未完成0)"
+          container
+            text "完成准时率"
+            text "78.6"
+            text "%"
+          container
+            text "总拖期"
+            text "9685"
+            text "分钟（加权）"
+          container
+            text "换色次数"
+            text "10"
+            text "次"
+          container
+            text "完工跨度"
+            text "1909"
+            text "分钟"
+        text "当前模型独立校验通过；不代表完整工厂工艺均已覆盖。"
+        container
+          container [ref=2331]
+            text "焊装投入顺序 · 14 辆"
+          table
+            table_row
+              table_cell
+                text "顺序"
+              table_cell
+                text "车辆"
+              table_cell
+                text "订单"
+              table_cell
+                text "车型"
+              table_cell
+                text "颜色"
+              table_cell
+                text "优先级"
+              table_cell
+                text "交期（第几天）"
+            table_row
+              table_cell
+                text "1"
+              table_cell
+                text "VIN_16C_D0_02"
+              table_cell
+                text "VIN_16C_D0_02"
+              table_cell
+                text "SUV"
+              table_cell
+                text "WHITE"
+              table_cell
+                text "1"
+              table_cell
+                text "1"
+            table_row
+              table_cell
+                text "2"
+              table_cell
+                text "VIN_16C_D0_04"
+              table_cell
+                text "VIN_16C_D0_04"
+              table_cell
+                text "SUV"
+              table_cell
+                text "BLACK"
+              table_cell
+                text "2"
+              table_cell
+                text "1"
+            table_row
+              table_cell
+                text "3"
+              table_cell
+                text "VIN_16C_D0_01"
+              table_cell
+                text "VIN_16C_D0_01"
+              table_cell
+                text "SEDAN"
+              table_cell
+                text "RED"
+              table_cell
+                text "1"
+              table_cell
+                text "1"
+            table_row
+              table_cell
+                text "4"
+              table_cell
+                text "VIN_16C_D0_03"
+              table_cell
+                text "VIN_16C_D0_03"
+              table_cell
+                text "SEDAN"
+              table_cell
+                text "BLUE"
+              table_cell
+                text "2"
+              table_cell
+                text "1"
+            table_row
+              table_cell
+                text "5"
+              table_cell
+                text "VIN_16C_D1_02"
+              table_cell
+                text "VIN_16C_D1_02"
+              table_cell
+                text "SUV"
+              table_cell
+                text "WHITE"
+              table_cell
+                text "1"
+              table_cell
+                text "2"
+            table_row
+              table_cell
+                text "6"
+              table_cell
+                text "VIN_16C_D1_04"
+              table_cell
+                text "VIN_16C_D1_04"
+              table_cell
+                text "SUV"
+              table_cell
+                text "BLACK"
+              table_cell
+                text "2"
+              table_cell
+                text "2"
+            table_row
+              table_cell
+                text "7"
+              table_cell
+                text "VIN_16C_D0_05"
+              table_cell
+                text "VIN_16C_D0_05"
+              table_cell
+                text "SEDAN"
+              table_cell
+                text "RED"
+              table_cell
+                text "2"
+              table_cell
+                text "1"
+            table_row
+              table_cell
+                text "8"
+              table_cell
+                text "VIN_16C_D1_01"
+              table_cell
+                text "VIN_16C_D1_01"
+              table_cell
+                text "SEDAN"
+              table_cell
+                text "RED"
+              table_cell
+                text "1"
+              table_cell
+                text "2"
+            table_row
+              table_cell
+                text "9"
+              table_cell
+                text "VIN_16C_D0_06"
+              table_cell
+                text "VIN_16C_D0_06"
+              table_cell
+                text "SUV"
+              table_cell
+                text "SILVER"
+              table_cell
+                text "2"
+              table_cell
+                text "1"
+            table_row
+              table_cell
+              table_cell
+              table_cell
+              table_cell
+              table_cell
+              table_cell
+              table_cell

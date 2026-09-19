@@ -1,0 +1,51 @@
+/* production-web.css — 生产量级周计划仿真独立组件样式（与旧 workbench 互不覆盖） */
+
+.prod-page h2{font-size:18px;margin:0 0 14px}
+.prod-subtitle{color:#6b7b8b;line-height:1.7;margin:6px 0 0}
+.prod-note{padding:12px 15px;border-radius:8px;background:#eef5fa;color:#36556e;line-height:1.8;margin:12px 0;overflow-wrap:anywhere}
+.prod-note.bad{background:#fff0ef;color:#a34238}
+.prod-note.ok{background:#eef8f2;color:#28664b}
+.prod-note.warn{background:#fff7e9;color:#8b622b}
+.prod-metric-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:16px 0}
+.prod-metric{border:1px solid #e1e8ed;border-radius:9px;padding:14px;display:flex;flex-direction:column;gap:6px;background:#fff}
+.prod-metric span{font-size:12px;color:#748797}
+.prod-metric strong{font-size:22px;color:#1b6174}
+.prod-metric small{color:#82929f;font-size:11px}
+.prod-rank{font-size:12px;font-weight:600;color:#28664b}
+.prod-strat-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin:14px 0}
+.prod-strat{border:1px solid #dce4eb;border-radius:10px;padding:14px;background:#fff}
+.prod-strat h3{font-size:15px;margin:0 0 10px}
+.prod-strat table{font-size:12px}
+.prod-strat table td{padding:5px 6px}
+.prod-filters{display:flex;gap:12px;align-items:flex-end;flex-wrap:wrap;margin:12px 0}
+.prod-filters label{display:flex;flex-direction:column;gap:6px;font-size:12px;font-weight:500}
+.prod-timeline-wrap{max-height:430px;overflow:auto;border:1px solid #e5eaf0;border-radius:8px}
+.prod-progressbar{height:16px;background:#e3e9ef;border-radius:8px;overflow:hidden;margin:10px 0}
+.prod-progressbar>i{display:block;height:100%;background:linear-gradient(90deg,#2a8c9c,#147d8f);transition:width .3s;color:#fff;font-size:11px;text-align:right;padding-right:6px;line-height:16px;font-style:normal;white-space:nowrap}
+.prod-hist{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.prod-chip{font-size:12px;padding:4px 10px;border-radius:20px;background:#eef3f7;color:#3c5770}
+.prod-chip.ok{background:#eaf7ef;color:#26724f}
+.prod-chip.bad{background:#ffece9;color:#b0483d}
+.prod-actions{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}
+.prod-dl{display:inline-flex;align-items:center;gap:6px}
+.prod-undef{color:#a0aab4;font-style:italic}
+
+/* ===== 简洁状态面板（业务语言；无计数） ===== */
+.prod-status{border:1px solid #c9d6e2;border-radius:12px;background:#fbfdff;padding:16px 18px;margin:14px 0;color:#16202b}
+.prod-status-line{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.prod-status-text{font-size:20px;font-weight:700;color:#0b4f63}
+.prod-native-progress{display:block;width:100%;height:14px;margin:12px 0 10px;border-radius:8px;overflow:hidden;accent-color:#0b6b83;background:#e3e9ef;border:1px solid #c9d6e2}
+.prod-native-progress::-webkit-progress-bar{background:#e3e9ef;border-radius:8px}
+.prod-native-progress::-webkit-progress-value{background:linear-gradient(90deg,#0b6b83,#128aa3);border-radius:8px}
+.prod-native-progress::-moz-progress-bar{background:#0b6b83;border-radius:8px}
+.prod-run-dot{width:12px;height:12px;border-radius:50%;background:#98a7b5;box-shadow:0 0 0 3px rgba(152,167,181,.18);flex:0 0 auto}
+.prod-run-dot.on{background:#0f8f4f;box-shadow:0 0 0 3px rgba(15,143,79,.22);animation:prodpulse 1.1s ease-in-out infinite}
+.prod-run-dot.wait{background:#b26a12;box-shadow:0 0 0 3px rgba(178,106,18,.22)}
+@keyframes prodpulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.45;transform:scale(.82)}}
+.prod-phase-note{padding:10px 12px;border-radius:8px;background:#eef5fa;color:#274a60;line-height:1.75;font-size:13px}
+.prod-phase-note.wait{background:#fff7e9;color:#7a5312}
+.prod-phase-note.bad{background:#fff0ef;color:#8f3227}
+@media (prefers-reduced-motion: reduce){
+  .prod-run-dot.on{animation:none}
+  .prod-native-progress,.prod-native-progress::-webkit-progress-value{transition:none}
+}

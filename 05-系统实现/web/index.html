@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>APS 计划与排程平台</title>
+<link rel="stylesheet" href="workbench.css">
+<link rel="stylesheet" href="production-web.css?v=prod-operations-2">
+</head>
+<body>
+<noscript><div class="noscript">本界面需要启用 JavaScript 才能使用。</div></noscript>
+
+<div class="app">
+  <aside class="sidebar" aria-label="主导航">
+    <div class="brand">
+      <div class="brand-mark">APS</div>
+      <div class="brand-text">
+        <b>计划与排程平台</b>
+        <small>Advanced Planning &amp; Scheduling</small>
+      </div>
+    </div>
+    <nav id="nav" class="nav"></nav>
+    <div class="sidebar-foot">
+      <div class="env-row"><span class="dot" id="envDot"></span><span id="envText">未连接</span></div>
+      <small>演示环境 · 未接入 ERP / MES<br>提交不会产生生产指令</small>
+    </div>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <div class="crumbs">
+        <span class="eyebrow">APS</span>
+        <span id="crumb">计划管理</span>
+        <span id="crumbSub" class="crumb-sub"></span>
+      </div>
+      <div class="topbar-actions">
+        <span class="scope" id="scopeInfo">—</span>
+        <label class="user-select">模拟身份
+          <select id="userSelect" aria-label="模拟身份"></select>
+        </label>
+        <button type="button" class="btn small" id="reloadBtn">刷新</button>
+      </div>
+    </header>
+
+    <div id="banner" class="banner-host" aria-live="polite"></div>
+    <main id="view" class="view" tabindex="-1"></main>
+
+    <footer class="foot">
+      APS 计划平台 · 演示环境：数据来自本机后端服务，未接入生产系统；角色为模拟身份，非生产鉴权。
+    </footer>
+  </div>
+</div>
+
+<div id="modal" class="modal-host" hidden></div>
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+<script src="production-web.js?v=prod-operations-2"></script>
+<script src="workbench.js?v=prod-operations-2"></script>
+</body>
+</html>

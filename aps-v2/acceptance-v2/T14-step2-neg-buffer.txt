@@ -1,0 +1,121 @@
+[p1 "APS 计划与排程平台" | space "APS业务重构逐项页面验收"(7): 1 managed, 0 untracked — p1* "APS 计划与排程平台"]
+root
+  container
+    container "主导航"
+      container
+        text "APS"
+        container
+          text "计划与排程平台"
+          text "Advanced Planning & Scheduling"
+      container
+        anchor [ref=1066, loc=href:/#/plans, url=http://127.0.0.1:18745/#/plans]
+          text "计划管理"
+        anchor [ref=1067, loc=href:/#/rules, url=http://127.0.0.1:18745/#/rules]
+          text "基础数据"
+      container
+        text "演示服务已连接"
+        container
+          text "演示环境 · 未接入 ERP / MES"
+          text "提交不会产生生产指令"
+    container
+      container [ref=1036]
+        container
+          table
+            table_row
+              table_cell
+                text "PULLOUT_CAR"
+              table_cell
+                text "涂装"
+              table_cell
+                text "RED->SILVER"
+              table_cell
+                spinbutton "PULLOUT_CAR P RED->SILVER切换分钟" [ref=1103, loc=css:input[aria-label="PULLOUT_CAR P RED->SILVER切换分钟"]]
+                  text "10"
+            table_row
+              table_cell
+                text "PULLOUT_CAR"
+              table_cell
+                text "涂装"
+              table_cell
+                text "BLUE->WHITE"
+              table_cell
+                spinbutton "PULLOUT_CAR P BLUE->WHITE切换分钟" [ref=1104, loc=css:input[aria-label="PULLOUT_CAR P BLUE->WHITE切换分钟"]]
+                  text "10"
+            table_row
+              table_cell
+                text "PULLOUT_CAR"
+              table_cell
+                text "涂装"
+              table_cell
+                text "BLUE->BLACK"
+              table_cell
+                spinbutton "PULLOUT_CAR P BLUE->BLACK切换分钟" [ref=1105, loc=css:input[aria-label="PULLOUT_CAR P BLUE->BLACK切换分钟"]]
+                  text "10"
+            table_row
+              table_cell
+                text "PULLOUT_CAR"
+              table_cell
+                text "涂装"
+              table_cell
+                text "BLUE->RED"
+              table_cell
+                spinbutton "PULLOUT_CAR P BLUE->RED切换分钟" [ref=1106, loc=css:input[aria-label="PULLOUT_CAR P BLUE->RED切换分钟"]]
+                  text "10"
+            table_row
+              table_cell
+                text "PULLOUT_CAR"
+              table_cell
+                text "涂装"
+              table_cell
+                text "BLUE->SILVER"
+              table_cell
+                spinbutton "PULLOUT_CAR P BLUE->SILVER切换分钟" [ref=1107, loc=css:input[aria-label="PULLOUT_CAR P BLUE->SILVER切换分钟"]]
+                  text "10"
+            table_row
+              table_cell
+                text "PULLOUT_CAR"
+              table_cell
+                text "涂装"
+              table_cell
+                text "SILVER->WHITE"
+              table_cell
+                spinbutton "PULLOUT_CAR P SILVER->WHITE切换分钟" [ref=1108, loc=css:input[aria-label="PULLOUT_CAR P SILVER->WHITE切换分钟"]]
+                  text "10"
+            table_row
+              table_cell
+                text "PULLOUT_CAR"
+              table_cell
+                text "涂装"
+              table_cell
+                text "SILVER->BLACK"
+              table_cell
+                spinbutton "PULLOUT_CAR P SILVER->BLACK切换分钟" [ref=1109, loc=css:input[aria-label="PULLOUT_CAR P SILVER->BLACK切换分钟"]]
+                  text "10"
+            table_row
+              table_cell
+                text "PULLOUT_CAR"
+              table_cell
+                text "涂装"
+              table_cell
+                text "SILVER->RED"
+              table_cell
+                spinbutton "PULLOUT_CAR P SILVER->RED切换分钟" [ref=1110, loc=css:input[aria-label="PULLOUT_CAR P SILVER->RED切换分钟"]]
+                  text "10"
+            table_row
+              table_cell
+                text "PULLOUT_CAR"
+              table_cell
+                text "涂装"
+              table_cell
+                text "SILVER->BLUE"
+              table_cell
+                spinbutton "PULLOUT_CAR P SILVER->BLUE切换分钟" [ref=1111, loc=css:input[aria-label="PULLOUT_CAR P SILVER->BLUE切换分钟"]]
+                  text "10"
+          container
+            button [ref=1095]
+              text "保存新版本"
+            button [ref=1096]
+              text "放弃修改"
+      text "APS 计划平台 · 演示环境：数据来自本机后端服务，未接入生产系统；角色为模拟身份，非生产鉴权。"
+  status
+    text "BUF_WP转运分钟须为不小于0的整数"

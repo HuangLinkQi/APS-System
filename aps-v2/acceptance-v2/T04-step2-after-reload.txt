@@ -1,0 +1,59 @@
+[p1 "APS 计划与排程平台" | space "APS业务重构逐项页面验收"(7): 1 managed, 0 untracked — p1* "APS 计划与排程平台"]
+root
+  container "主导航"
+    container
+      text "APS"
+      container
+        text "计划与排程平台"
+        text "Advanced Planning & Scheduling"
+    container
+      anchor [ref=807, url=http://127.0.0.1:18745/#/plans]
+        text "计划管理"
+      anchor [ref=808, loc=href:/#/rules, url=http://127.0.0.1:18745/#/rules]
+        text "基础数据"
+    container
+      text "演示服务已连接"
+      container
+        text "演示环境 · 未接入 ERP / MES"
+        text "提交不会产生生产指令"
+  container
+    container
+      container
+        text "APS"
+        text "排程工作台"
+      container
+        text "计划员 A · F1 · F1 / FACTORY_1"
+        container
+          text "模拟身份"
+          combobox "模拟身份" [ref=809, loc=css:select[aria-label="模拟身份"]]
+            text "计划员 A · F1"
+        button [ref=810]
+          text "刷新"
+    container [ref=811]
+      container
+        container
+          anchor [ref=812, url=http://127.0.0.1:18745/#/plans]
+            text "返回计划管理"
+          heading
+            text "T03-验收新草稿-复测"
+          paragraph
+            text "F1 · W+3演示排程 ·"
+            text "草稿"
+        button [ref=813]
+          text "刷新计划"
+      text "研究演示环境：未接入ERP / MES。提交和批准仅记录本机演示状态，不下发生产指令。"
+      container
+        heading
+          text "1 · 准备数据"
+        text "尚未选择演示场景。选择后将一次准备订单、供应、产线、节拍和日历。"
+        button [ref=814]
+          text "下一步：准备数据"
+      container
+        heading
+          text "2 · 生成方案"
+        paragraph
+          text "系统比较交期、颜色集中、负荷均衡和综合优化四种候选，不要求输入算法参数。"
+        button [ref=815]
+          text "生成方案"
+      heading
+        text "3 · 方案结果"

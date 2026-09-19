@@ -1,0 +1,1687 @@
+指引
+[p1 "APS 计划与排程平台" | space "APS业务重构逐项页面验收"(7): 1 managed, 0 untracked — p1* "APS 计划与排程平台"]
+root
+  container "主导航"
+    container
+      text "APS"
+      container
+        text "计划与排程平台"
+        text "Advanced Planning & Scheduling"
+    container
+      anchor [ref=292, loc=href:/#/plans, url=http://127.0.0.1:18745/#/plans]
+        text "计划管理"
+      anchor [ref=293, loc=href:/#/rules, url=http://127.0.0.1:18745/#/rules]
+        text "基础数据"
+    container
+      text "演示服务已连接"
+      container
+        text "演示环境 · 未接入 ERP / MES"
+        text "提交不会产生生产指令"
+  container
+    container
+      container
+        text "APS"
+        text "基础数据"
+      container
+        text "计划员 A · F1 · F1 / FACTORY_1"
+        container
+          text "模拟身份"
+          combobox "模拟身份" [ref=50, loc=css:select[aria-label="模拟身份"]]
+            text "计划员 A · F1"
+        button [ref=51]
+          text "刷新"
+    container [ref=52]
+      container
+        container
+          heading
+            text "基础数据"
+          paragraph
+            text "工艺负责人维护，计划引用版本；保存不会悄悄覆盖历史计划。"
+        anchor [ref=294, loc=href:/#/plan/1a09a138d80a, url=http://127.0.0.1:18745/#/plan/1a09a138d80a]
+          text "返回原计划"
+      text "当前为只读查看。需要修改时请由工艺负责人维护，再回到计划引用最新版本。"
+      container
+        text "资料范围"
+        combobox [ref=295]
+          text "F1 · 正常生产 · 12辆基准"
+      container
+        heading
+          text "版本 2 · F1"
+        paragraph
+          text "来源：显式加载的演示场景。更新人：工艺负责人 · F1 · 2026-09-18T17:49:31+00:00"
+        status
+          text "SUV_WHITE缺少焊装有效节拍"
+        container
+          container [ref=296]
+            text "产线资源"
+          container
+            table
+              table_row
+                table_cell
+                  text "编号"
+                table_cell
+                  text "工序"
+                table_cell
+                  text "状态"
+              table_row
+                table_cell
+                  text "W_LINE"
+                table_cell
+                  text "焊装"
+                table_cell
+                  text "启用"
+              table_row
+                table_cell
+                  text "P_LINE"
+                table_cell
+                  text "涂装"
+                table_cell
+                  text "启用"
+              table_row
+                table_cell
+                  text "A_LINE"
+                table_cell
+                  text "总装"
+                table_cell
+                  text "启用"
+            text "当前模型每个工序仅支持1条启用产线、单资源加工。新增产线可先停用，替换时先停用旧线；不提供无效的并行能力输入。"
+角色
+[p1 "APS 计划与排程平台" | space "APS业务重构逐项页面验收"(7): 1 managed, 0 untracked — p1* "APS 计划与排程平台"]
+root
+  container "主导航"
+    container
+      text "APS"
+      container
+        text "计划与排程平台"
+        text "Advanced Planning & Scheduling"
+    container
+      anchor [ref=297, loc=href:/#/plans, url=http://127.0.0.1:18745/#/plans]
+        text "计划管理"
+      anchor [ref=298, loc=href:/#/rules, url=http://127.0.0.1:18745/#/rules]
+        text "基础数据"
+    container
+      text "演示服务已连接"
+      container
+        text "演示环境 · 未接入 ERP / MES"
+        text "提交不会产生生产指令"
+  container
+    container
+      container
+        text "APS"
+        text "计划管理"
+      container
+        text "工艺负责人 · F1 · F1 / FACTORY_1"
+        container
+          text "模拟身份"
+          combobox "模拟身份" [ref=50, loc=css:select[aria-label="模拟身份"]]
+            text "工艺负责人 · F1"
+        button [ref=51]
+          text "刷新"
+    container [ref=52]
+      container
+        heading
+          text "计划管理"
+        paragraph
+          text "从业务数据生成排程方案。无预置计划，无预置计算结果。"
+      container
+        container
+          text "搜索计划"
+          searchbox [ref=299, loc=css:input[placeholder="输入名称或编号"]]
+            text "输入名称或编号"
+        container
+          text "状态"
+          combobox [ref=300]
+            text "全部状态"
+        button [ref=301]
+          text "刷新列表"
+      container
+        heading
+          text "计划列表 · 1 条"
+        table
+          table_row
+            table_cell
+              text "计划名称"
+            table_cell
+              text "工厂"
+            table_cell
+              text "状态"
+            table_cell
+              text "数据来源"
+            table_cell
+              text "历史计算"
+            table_cell
+              text "操作"
+          table_row
+            table_cell
+              text "验收V2-正常生产-01"
+            table_cell
+              text "F1"
+            table_cell
+              text "草稿"
+            table_cell
+              text "正常生产 · 12辆基准"
+            table_cell
+              text "0"
+            table_cell
+              anchor [ref=302, loc=href:/#/plan/1a09a138d80a, url=http://127.0.0.1:18745/#/plan/1a09a138d80a]
+                text "打开"
+    text "APS 计划平台 · 演示环境：数据来自本机后端服务，未接入生产系统；角色为模拟身份，非生产鉴权。"
+修复输入15
+[p1 "APS 计划与排程平台" | space "APS业务重构逐项页面验收"(7): 1 managed, 0 untracked — p1* "APS 计划与排程平台"]
+root
+  container "主导航"
+    container
+      text "APS"
+      container
+        text "计划与排程平台"
+        text "Advanced Planning & Scheduling"
+    container
+      anchor [ref=303, loc=href:/#/plans, url=http://127.0.0.1:18745/#/plans]
+        text "计划管理"
+      anchor [ref=304, loc=href:/#/rules, url=http://127.0.0.1:18745/#/rules]
+        text "基础数据"
+    container
+      text "演示服务已连接"
+      container
+        text "演示环境 · 未接入 ERP / MES"
+        text "提交不会产生生产指令"
+  container [ref=52]
+    container
+      container
+        container
+          table
+            table_row
+              table_cell
+                textbox "产线2编号" [ref=305, loc=css:input[aria-label="产线2编号"]]
+                  text "P_LINE"
+              table_cell
+                combobox "产线2工序" [ref=306, loc=css:select[aria-label="产线2工序"]]
+                  text "涂装"
+              table_cell
+                combobox "产线2状态" [ref=307, loc=css:select[aria-label="产线2状态"]]
+                  text "启用"
+            table_row
+              table_cell
+                textbox "产线3编号" [ref=308, loc=css:input[aria-label="产线3编号"]]
+                  text "A_LINE"
+              table_cell
+                combobox "产线3工序" [ref=309, loc=css:select[aria-label="产线3工序"]]
+                  text "总装"
+              table_cell
+                combobox "产线3状态" [ref=310, loc=css:select[aria-label="产线3状态"]]
+                  text "启用"
+          button [ref=311]
+            text "新增产线"
+          text "当前模型每个工序仅支持1条启用产线、单资源加工。新增产线可先停用，替换时先停用旧线；不提供无效的并行能力输入。"
+        container
+          container [ref=312]
+            text "生产节拍（每车分钟）"
+          table
+            table_row
+              table_cell
+                text "配置"
+              table_cell
+                text "车型"
+              table_cell
+                text "颜色"
+              table_cell
+                text "工序"
+              table_cell
+                text "节拍（分钟）"
+            table_row
+              table_cell
+                text "SUV_WHITE"
+              table_cell
+                text "SUV"
+              table_cell
+                text "WHITE"
+              table_cell
+                text "焊装"
+              table_cell
+                spinbutton "SUV_WHITE 焊装节拍" [ref=313, loc=css:input[aria-label="SUV_WHITE 焊装节拍"]]
+                  text "15"
+            table_row
+              table_cell
+                text "SUV_WHITE"
+              table_cell
+                text "SUV"
+              table_cell
+                text "WHITE"
+              table_cell
+                text "涂装"
+              table_cell
+                spinbutton "SUV_WHITE 涂装节拍" [ref=314, loc=css:input[aria-label="SUV_WHITE 涂装节拍"]]
+                  text "35"
+            table_row
+              table_cell
+                text "SUV_WHITE"
+              table_cell
+                text "SUV"
+              table_cell
+                text "WHITE"
+              table_cell
+                text "总装"
+              table_cell
+                spinbutton "SUV_WHITE 总装节拍" [ref=315, loc=css:input[aria-label="SUV_WHITE 总装节拍"]]
+                  text "25"
+            table_row
+              table_cell
+                text "SUV_BLACK"
+              table_cell
+                text "SUV"
+              table_cell
+                text "BLACK"
+              table_cell
+                text "焊装"
+              table_cell
+                spinbutton "SUV_BLACK 焊装节拍" [ref=316, loc=css:input[aria-label="SUV_BLACK 焊装节拍"]]
+                  text "15"
+            table_row
+              table_cell
+                text "SUV_BLACK"
+              table_cell
+                text "SUV"
+              table_cell
+                text "BLACK"
+              table_cell
+                text "涂装"
+              table_cell
+                spinbutton "SUV_BLACK 涂装节拍" [ref=317, loc=css:input[aria-label="SUV_BLACK 涂装节拍"]]
+                  text "35"
+            table_row
+              table_cell
+                text "SUV_BLACK"
+              table_cell
+                text "SUV"
+              table_cell
+                text "BLACK"
+              table_cell
+                text "总装"
+              table_cell
+                spinbutton "SUV_BLACK 总装节拍" [ref=318, loc=css:input[aria-label="SUV_BLACK 总装节拍"]]
+                  text "25"
+            table_row
+              table_cell
+                text "SEDAN_RED"
+              table_cell
+                text "SEDAN"
+              table_cell
+                text "RED"
+              table_cell
+                text "焊装"
+              table_cell
+                spinbutton "SEDAN_RED 焊装节拍" [ref=319, loc=css:input[aria-label="SEDAN_RED 焊装节拍"]]
+                  text "20"
+      container
+        button [ref=320]
+          text "保存新版本"
+        button [ref=321]
+          text "放弃修改"
+保存3
+[p1 "APS 计划与排程平台" | space "APS业务重构逐项页面验收"(7): 1 managed, 0 untracked — p1* "APS 计划与排程平台"]
+root
+  container
+    container "主导航"
+      container
+        text "APS"
+        container
+          text "计划与排程平台"
+          text "Advanced Planning & Scheduling"
+      container
+        anchor [ref=303, loc=href:/#/plans, url=http://127.0.0.1:18745/#/plans]
+          text "计划管理"
+        anchor [ref=304, loc=href:/#/rules, url=http://127.0.0.1:18745/#/rules]
+          text "基础数据"
+      container
+        text "演示服务已连接"
+        container
+          text "演示环境 · 未接入 ERP / MES"
+          text "提交不会产生生产指令"
+    container [ref=52]
+      container
+        container
+          container
+            table
+              table_row
+                table_cell
+                  textbox "产线2编号" [ref=322, loc=css:input[aria-label="产线2编号"]]
+                    text "P_LINE"
+                table_cell
+                  combobox "产线2工序" [ref=323, loc=css:select[aria-label="产线2工序"]]
+                    text "涂装"
+                table_cell
+                  combobox "产线2状态" [ref=324, loc=css:select[aria-label="产线2状态"]]
+                    text "启用"
+              table_row
+                table_cell
+                  textbox "产线3编号" [ref=325, loc=css:input[aria-label="产线3编号"]]
+                    text "A_LINE"
+                table_cell
+                  combobox "产线3工序" [ref=326, loc=css:select[aria-label="产线3工序"]]
+                    text "总装"
+                table_cell
+                  combobox "产线3状态" [ref=327, loc=css:select[aria-label="产线3状态"]]
+                    text "启用"
+            button [ref=328]
+              text "新增产线"
+            text "当前模型每个工序仅支持1条启用产线、单资源加工。新增产线可先停用，替换时先停用旧线；不提供无效的并行能力输入。"
+          container
+            container [ref=329]
+              text "生产节拍（每车分钟）"
+            table
+              table_row
+                table_cell
+                  text "配置"
+                table_cell
+                  text "车型"
+                table_cell
+                  text "颜色"
+                table_cell
+                  text "工序"
+                table_cell
+                  text "节拍（分钟）"
+              table_row
+                table_cell
+                  text "SUV_WHITE"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "WHITE"
+                table_cell
+                  text "焊装"
+                table_cell
+                  spinbutton "SUV_WHITE 焊装节拍" [ref=330, loc=css:input[aria-label="SUV_WHITE 焊装节拍"]]
+                    text "15"
+              table_row
+                table_cell
+                  text "SUV_WHITE"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "WHITE"
+                table_cell
+                  text "涂装"
+                table_cell
+                  spinbutton "SUV_WHITE 涂装节拍" [ref=331, loc=css:input[aria-label="SUV_WHITE 涂装节拍"]]
+                    text "35"
+              table_row
+                table_cell
+                  text "SUV_WHITE"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "WHITE"
+                table_cell
+                  text "总装"
+                table_cell
+                  spinbutton "SUV_WHITE 总装节拍" [ref=332, loc=css:input[aria-label="SUV_WHITE 总装节拍"]]
+                    text "25"
+              table_row
+                table_cell
+                  text "SUV_BLACK"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "BLACK"
+                table_cell
+                  text "焊装"
+                table_cell
+                  spinbutton "SUV_BLACK 焊装节拍" [ref=333, loc=css:input[aria-label="SUV_BLACK 焊装节拍"]]
+                    text "15"
+              table_row
+                table_cell
+                  text "SUV_BLACK"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "BLACK"
+                table_cell
+                  text "涂装"
+                table_cell
+                  spinbutton "SUV_BLACK 涂装节拍" [ref=334, loc=css:input[aria-label="SUV_BLACK 涂装节拍"]]
+                    text "35"
+              table_row
+                table_cell
+                  text "SUV_BLACK"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "BLACK"
+                table_cell
+                  text "总装"
+                table_cell
+                  spinbutton "SUV_BLACK 总装节拍" [ref=335, loc=css:input[aria-label="SUV_BLACK 总装节拍"]]
+                    text "25"
+              table_row
+                table_cell
+                  text "SEDAN_RED"
+                table_cell
+                  text "SEDAN"
+                table_cell
+                  text "RED"
+                table_cell
+                  text "焊装"
+                table_cell
+                  spinbutton "SEDAN_RED 焊装节拍" [ref=336, loc=css:input[aria-label="SEDAN_RED 焊装节拍"]]
+                    text "20"
+        container
+          button [ref=337]
+            text "保存新版本"
+          button [ref=338]
+            text "放弃修改"
+  status
+    text "已保存基础资料版本 3。现有计划需显式引用。"
+新增行
+[p1 "APS 计划与排程平台" | space "APS业务重构逐项页面验收"(7): 1 managed, 0 untracked — p1* "APS 计划与排程平台"]
+root
+  container
+    container "主导航"
+      container
+        text "APS"
+        container
+          text "计划与排程平台"
+          text "Advanced Planning & Scheduling"
+      container
+        anchor [ref=303, loc=href:/#/plans, url=http://127.0.0.1:18745/#/plans]
+          text "计划管理"
+        anchor [ref=304, loc=href:/#/rules, url=http://127.0.0.1:18745/#/rules]
+          text "基础数据"
+      container
+        text "演示服务已连接"
+        container
+          text "演示环境 · 未接入 ERP / MES"
+          text "提交不会产生生产指令"
+    container [ref=52]
+      container
+        container
+          container
+            table
+              table_row
+                table_cell
+                  textbox "产线2编号" [ref=339, loc=css:input[aria-label="产线2编号"]]
+                    text "P_LINE"
+                table_cell
+                  combobox "产线2工序" [ref=340, loc=css:select[aria-label="产线2工序"]]
+                    text "涂装"
+                table_cell
+                  combobox "产线2状态" [ref=341, loc=css:select[aria-label="产线2状态"]]
+                    text "启用"
+              table_row
+                table_cell
+                  textbox "产线3编号" [ref=342, loc=css:input[aria-label="产线3编号"]]
+                    text "A_LINE"
+                table_cell
+                  combobox "产线3工序" [ref=343, loc=css:select[aria-label="产线3工序"]]
+                    text "总装"
+                table_cell
+                  combobox "产线3状态" [ref=344, loc=css:select[aria-label="产线3状态"]]
+                    text "启用"
+              table_row
+                table_cell
+                  textbox "产线4编号" [ref=345, loc=css:input[aria-label="产线4编号"]]
+                table_cell
+                  combobox "产线4工序" [ref=346, loc=css:select[aria-label="产线4工序"]]
+                    text "焊装"
+                table_cell
+                  combobox "产线4状态" [ref=347, loc=css:select[aria-label="产线4状态"]]
+                    text "停用"
+            button [ref=348]
+              text "新增产线"
+            text "当前模型每个工序仅支持1条启用产线、单资源加工。新增产线可先停用，替换时先停用旧线；不提供无效的并行能力输入。"
+          container
+            container [ref=349]
+              text "生产节拍（每车分钟）"
+            table
+              table_row
+                table_cell
+                  text "配置"
+                table_cell
+                  text "车型"
+                table_cell
+                  text "颜色"
+                table_cell
+                  text "工序"
+                table_cell
+                  text "节拍（分钟）"
+              table_row
+                table_cell
+                  text "SUV_WHITE"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "WHITE"
+                table_cell
+                  text "焊装"
+                table_cell
+                  spinbutton "SUV_WHITE 焊装节拍" [ref=350, loc=css:input[aria-label="SUV_WHITE 焊装节拍"]]
+                    text "15"
+              table_row
+                table_cell
+                  text "SUV_WHITE"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "WHITE"
+                table_cell
+                  text "涂装"
+                table_cell
+                  spinbutton "SUV_WHITE 涂装节拍" [ref=351, loc=css:input[aria-label="SUV_WHITE 涂装节拍"]]
+                    text "35"
+              table_row
+                table_cell
+                  text "SUV_WHITE"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "WHITE"
+                table_cell
+                  text "总装"
+                table_cell
+                  spinbutton "SUV_WHITE 总装节拍" [ref=352, loc=css:input[aria-label="SUV_WHITE 总装节拍"]]
+                    text "25"
+              table_row
+                table_cell
+                  text "SUV_BLACK"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "BLACK"
+                table_cell
+                  text "焊装"
+                table_cell
+                  spinbutton "SUV_BLACK 焊装节拍" [ref=353, loc=css:input[aria-label="SUV_BLACK 焊装节拍"]]
+                    text "15"
+              table_row
+                table_cell
+                  text "SUV_BLACK"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "BLACK"
+                table_cell
+                  text "涂装"
+                table_cell
+                  spinbutton "SUV_BLACK 涂装节拍" [ref=354, loc=css:input[aria-label="SUV_BLACK 涂装节拍"]]
+                    text "35"
+              table_row
+                table_cell
+                  text "SUV_BLACK"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "BLACK"
+                table_cell
+                  text "总装"
+                table_cell
+                  spinbutton "SUV_BLACK 总装节拍" [ref=355, loc=css:input[aria-label="SUV_BLACK 总装节拍"]]
+                    text "25"
+        container
+          button [ref=337]
+            text "保存新版本"
+          button [ref=338]
+            text "放弃修改"
+  status
+    text "已保存基础资料版本 3。现有计划需显式引用。"
+空编号拒绝
+[p1 "APS 计划与排程平台" | space "APS业务重构逐项页面验收"(7): 1 managed, 0 untracked — p1* "APS 计划与排程平台"]
+root
+  container
+    container "主导航"
+      container
+        text "APS"
+        container
+          text "计划与排程平台"
+          text "Advanced Planning & Scheduling"
+      container
+        anchor [ref=303, loc=href:/#/plans, url=http://127.0.0.1:18745/#/plans]
+          text "计划管理"
+        anchor [ref=304, loc=href:/#/rules, url=http://127.0.0.1:18745/#/rules]
+          text "基础数据"
+      container
+        text "演示服务已连接"
+        container
+          text "演示环境 · 未接入 ERP / MES"
+          text "提交不会产生生产指令"
+    container [ref=52]
+      container
+        container
+          container
+            table
+              table_row
+                table_cell
+                  textbox "产线2编号" [ref=339, loc=css:input[aria-label="产线2编号"]]
+                    text "P_LINE"
+                table_cell
+                  combobox "产线2工序" [ref=340, loc=css:select[aria-label="产线2工序"]]
+                    text "涂装"
+                table_cell
+                  combobox "产线2状态" [ref=341, loc=css:select[aria-label="产线2状态"]]
+                    text "启用"
+              table_row
+                table_cell
+                  textbox "产线3编号" [ref=342, loc=css:input[aria-label="产线3编号"]]
+                    text "A_LINE"
+                table_cell
+                  combobox "产线3工序" [ref=343, loc=css:select[aria-label="产线3工序"]]
+                    text "总装"
+                table_cell
+                  combobox "产线3状态" [ref=344, loc=css:select[aria-label="产线3状态"]]
+                    text "启用"
+              table_row
+                table_cell
+                  textbox "产线4编号" [ref=345, loc=css:input[aria-label="产线4编号"]]
+                table_cell
+                  combobox "产线4工序" [ref=346, loc=css:select[aria-label="产线4工序"]]
+                    text "焊装"
+                table_cell
+                  combobox "产线4状态" [ref=347, loc=css:select[aria-label="产线4状态"]]
+                    text "停用"
+            button [ref=348]
+              text "新增产线"
+            text "当前模型每个工序仅支持1条启用产线、单资源加工。新增产线可先停用，替换时先停用旧线；不提供无效的并行能力输入。"
+          container
+            container [ref=349]
+              text "生产节拍（每车分钟）"
+            table
+              table_row
+                table_cell
+                  text "配置"
+                table_cell
+                  text "车型"
+                table_cell
+                  text "颜色"
+                table_cell
+                  text "工序"
+                table_cell
+                  text "节拍（分钟）"
+              table_row
+                table_cell
+                  text "SUV_WHITE"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "WHITE"
+                table_cell
+                  text "焊装"
+                table_cell
+                  spinbutton "SUV_WHITE 焊装节拍" [ref=350, loc=css:input[aria-label="SUV_WHITE 焊装节拍"]]
+                    text "15"
+              table_row
+                table_cell
+                  text "SUV_WHITE"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "WHITE"
+                table_cell
+                  text "涂装"
+                table_cell
+                  spinbutton "SUV_WHITE 涂装节拍" [ref=351, loc=css:input[aria-label="SUV_WHITE 涂装节拍"]]
+                    text "35"
+              table_row
+                table_cell
+                  text "SUV_WHITE"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "WHITE"
+                table_cell
+                  text "总装"
+                table_cell
+                  spinbutton "SUV_WHITE 总装节拍" [ref=352, loc=css:input[aria-label="SUV_WHITE 总装节拍"]]
+                    text "25"
+              table_row
+                table_cell
+                  text "SUV_BLACK"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "BLACK"
+                table_cell
+                  text "焊装"
+                table_cell
+                  spinbutton "SUV_BLACK 焊装节拍" [ref=353, loc=css:input[aria-label="SUV_BLACK 焊装节拍"]]
+                    text "15"
+              table_row
+                table_cell
+                  text "SUV_BLACK"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "BLACK"
+                table_cell
+                  text "涂装"
+                table_cell
+                  spinbutton "SUV_BLACK 涂装节拍" [ref=354, loc=css:input[aria-label="SUV_BLACK 涂装节拍"]]
+                    text "35"
+              table_row
+                table_cell
+                  text "SUV_BLACK"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "BLACK"
+                table_cell
+                  text "总装"
+                table_cell
+                  spinbutton "SUV_BLACK 总装节拍" [ref=355, loc=css:input[aria-label="SUV_BLACK 总装节拍"]]
+                    text "25"
+        container
+          button [ref=337]
+            text "保存新版本"
+          button [ref=338]
+            text "放弃修改"
+  status
+    text "产线编号必填且不能重复"
+编号输入
+[p1 "APS 计划与排程平台" | space "APS业务重构逐项页面验收"(7): 1 managed, 0 untracked — p1* "APS 计划与排程平台"]
+root
+  container
+    container "主导航"
+      container
+        text "APS"
+        container
+          text "计划与排程平台"
+          text "Advanced Planning & Scheduling"
+      container
+        anchor [ref=303, loc=href:/#/plans, url=http://127.0.0.1:18745/#/plans]
+          text "计划管理"
+        anchor [ref=304, loc=href:/#/rules, url=http://127.0.0.1:18745/#/rules]
+          text "基础数据"
+      container
+        text "演示服务已连接"
+        container
+          text "演示环境 · 未接入 ERP / MES"
+          text "提交不会产生生产指令"
+    container [ref=52]
+      container
+        container
+          container
+            table
+              table_row
+                table_cell
+                  textbox "产线2编号" [ref=339, loc=css:input[aria-label="产线2编号"]]
+                    text "P_LINE"
+                table_cell
+                  combobox "产线2工序" [ref=340, loc=css:select[aria-label="产线2工序"]]
+                    text "涂装"
+                table_cell
+                  combobox "产线2状态" [ref=341, loc=css:select[aria-label="产线2状态"]]
+                    text "启用"
+              table_row
+                table_cell
+                  textbox "产线3编号" [ref=342, loc=css:input[aria-label="产线3编号"]]
+                    text "A_LINE"
+                table_cell
+                  combobox "产线3工序" [ref=343, loc=css:select[aria-label="产线3工序"]]
+                    text "总装"
+                table_cell
+                  combobox "产线3状态" [ref=344, loc=css:select[aria-label="产线3状态"]]
+                    text "启用"
+              table_row
+                table_cell
+                  textbox "产线4编号" [ref=345, loc=css:input[aria-label="产线4编号"]]
+                    text "W_LINE_BACKUP"
+                table_cell
+                  combobox "产线4工序" [ref=346, loc=css:select[aria-label="产线4工序"]]
+                    text "焊装"
+                table_cell
+                  combobox "产线4状态" [ref=347, loc=css:select[aria-label="产线4状态"]]
+                    text "停用"
+            button [ref=348]
+              text "新增产线"
+            text "当前模型每个工序仅支持1条启用产线、单资源加工。新增产线可先停用，替换时先停用旧线；不提供无效的并行能力输入。"
+          container
+            container [ref=349]
+              text "生产节拍（每车分钟）"
+            table
+              table_row
+                table_cell
+                  text "配置"
+                table_cell
+                  text "车型"
+                table_cell
+                  text "颜色"
+                table_cell
+                  text "工序"
+                table_cell
+                  text "节拍（分钟）"
+              table_row
+                table_cell
+                  text "SUV_WHITE"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "WHITE"
+                table_cell
+                  text "焊装"
+                table_cell
+                  spinbutton "SUV_WHITE 焊装节拍" [ref=350, loc=css:input[aria-label="SUV_WHITE 焊装节拍"]]
+                    text "15"
+              table_row
+                table_cell
+                  text "SUV_WHITE"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "WHITE"
+                table_cell
+                  text "涂装"
+                table_cell
+                  spinbutton "SUV_WHITE 涂装节拍" [ref=351, loc=css:input[aria-label="SUV_WHITE 涂装节拍"]]
+                    text "35"
+              table_row
+                table_cell
+                  text "SUV_WHITE"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "WHITE"
+                table_cell
+                  text "总装"
+                table_cell
+                  spinbutton "SUV_WHITE 总装节拍" [ref=352, loc=css:input[aria-label="SUV_WHITE 总装节拍"]]
+                    text "25"
+              table_row
+                table_cell
+                  text "SUV_BLACK"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "BLACK"
+                table_cell
+                  text "焊装"
+                table_cell
+                  spinbutton "SUV_BLACK 焊装节拍" [ref=353, loc=css:input[aria-label="SUV_BLACK 焊装节拍"]]
+                    text "15"
+              table_row
+                table_cell
+                  text "SUV_BLACK"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "BLACK"
+                table_cell
+                  text "涂装"
+                table_cell
+                  spinbutton "SUV_BLACK 涂装节拍" [ref=354, loc=css:input[aria-label="SUV_BLACK 涂装节拍"]]
+                    text "35"
+              table_row
+                table_cell
+                  text "SUV_BLACK"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "BLACK"
+                table_cell
+                  text "总装"
+                table_cell
+                  spinbutton "SUV_BLACK 总装节拍" [ref=355, loc=css:input[aria-label="SUV_BLACK 总装节拍"]]
+                    text "25"
+        container
+          button [ref=337]
+            text "保存新版本"
+          button [ref=338]
+            text "放弃修改"
+  status
+    text "产线编号必填且不能重复"
+保存4
+[p1 "APS 计划与排程平台" | space "APS业务重构逐项页面验收"(7): 1 managed, 0 untracked — p1* "APS 计划与排程平台"]
+root
+  container
+    container "主导航"
+      container
+        text "APS"
+        container
+          text "计划与排程平台"
+          text "Advanced Planning & Scheduling"
+      container
+        anchor [ref=303, loc=href:/#/plans, url=http://127.0.0.1:18745/#/plans]
+          text "计划管理"
+        anchor [ref=304, loc=href:/#/rules, url=http://127.0.0.1:18745/#/rules]
+          text "基础数据"
+      container
+        text "演示服务已连接"
+        container
+          text "演示环境 · 未接入 ERP / MES"
+          text "提交不会产生生产指令"
+    container [ref=52]
+      container
+        container
+          container
+            table
+              table_row
+                table_cell
+                  textbox "产线2编号" [ref=356, loc=css:input[aria-label="产线2编号"]]
+                    text "P_LINE"
+                table_cell
+                  combobox "产线2工序" [ref=357, loc=css:select[aria-label="产线2工序"]]
+                    text "涂装"
+                table_cell
+                  combobox "产线2状态" [ref=358, loc=css:select[aria-label="产线2状态"]]
+                    text "启用"
+              table_row
+                table_cell
+                  textbox "产线3编号" [ref=359, loc=css:input[aria-label="产线3编号"]]
+                    text "A_LINE"
+                table_cell
+                  combobox "产线3工序" [ref=360, loc=css:select[aria-label="产线3工序"]]
+                    text "总装"
+                table_cell
+                  combobox "产线3状态" [ref=361, loc=css:select[aria-label="产线3状态"]]
+                    text "启用"
+              table_row
+                table_cell
+                  textbox "产线4编号" [ref=362, loc=css:input[aria-label="产线4编号"]]
+                    text "W_LINE_BACKUP"
+                table_cell
+                  combobox "产线4工序" [ref=363, loc=css:select[aria-label="产线4工序"]]
+                    text "焊装"
+                table_cell
+                  combobox "产线4状态" [ref=364, loc=css:select[aria-label="产线4状态"]]
+                    text "停用"
+            button [ref=365]
+              text "新增产线"
+            text "当前模型每个工序仅支持1条启用产线、单资源加工。新增产线可先停用，替换时先停用旧线；不提供无效的并行能力输入。"
+          container
+            container [ref=366]
+              text "生产节拍（每车分钟）"
+            table
+              table_row
+                table_cell
+                  text "配置"
+                table_cell
+                  text "车型"
+                table_cell
+                  text "颜色"
+                table_cell
+                  text "工序"
+                table_cell
+                  text "节拍（分钟）"
+              table_row
+                table_cell
+                  text "SUV_WHITE"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "WHITE"
+                table_cell
+                  text "焊装"
+                table_cell
+                  spinbutton "SUV_WHITE 焊装节拍" [ref=367, loc=css:input[aria-label="SUV_WHITE 焊装节拍"]]
+                    text "15"
+              table_row
+                table_cell
+                  text "SUV_WHITE"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "WHITE"
+                table_cell
+                  text "涂装"
+                table_cell
+                  spinbutton "SUV_WHITE 涂装节拍" [ref=368, loc=css:input[aria-label="SUV_WHITE 涂装节拍"]]
+                    text "35"
+              table_row
+                table_cell
+                  text "SUV_WHITE"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "WHITE"
+                table_cell
+                  text "总装"
+                table_cell
+                  spinbutton "SUV_WHITE 总装节拍" [ref=369, loc=css:input[aria-label="SUV_WHITE 总装节拍"]]
+                    text "25"
+              table_row
+                table_cell
+                  text "SUV_BLACK"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "BLACK"
+                table_cell
+                  text "焊装"
+                table_cell
+                  spinbutton "SUV_BLACK 焊装节拍" [ref=370, loc=css:input[aria-label="SUV_BLACK 焊装节拍"]]
+                    text "15"
+              table_row
+                table_cell
+                  text "SUV_BLACK"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "BLACK"
+                table_cell
+                  text "涂装"
+                table_cell
+                  spinbutton "SUV_BLACK 涂装节拍" [ref=371, loc=css:input[aria-label="SUV_BLACK 涂装节拍"]]
+                    text "35"
+              table_row
+                table_cell
+                  text "SUV_BLACK"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "BLACK"
+                table_cell
+                  text "总装"
+                table_cell
+                  spinbutton "SUV_BLACK 总装节拍" [ref=372, loc=css:input[aria-label="SUV_BLACK 总装节拍"]]
+                    text "25"
+        container
+          button [ref=373]
+            text "保存新版本"
+          button [ref=374]
+            text "放弃修改"
+  status
+    text "已保存基础资料版本 4。现有计划需显式引用。"
+启用备用线
+[p1 "APS 计划与排程平台" | space "APS业务重构逐项页面验收"(7): 1 managed, 0 untracked — p1* "APS 计划与排程平台"]
+root
+  container
+    container "主导航"
+      container
+        text "APS"
+        container
+          text "计划与排程平台"
+          text "Advanced Planning & Scheduling"
+      container
+        anchor [ref=303, loc=href:/#/plans, url=http://127.0.0.1:18745/#/plans]
+          text "计划管理"
+        anchor [ref=304, loc=href:/#/rules, url=http://127.0.0.1:18745/#/rules]
+          text "基础数据"
+      container
+        text "演示服务已连接"
+        container
+          text "演示环境 · 未接入 ERP / MES"
+          text "提交不会产生生产指令"
+    container [ref=52]
+      container
+        container
+          container
+            table
+              table_row
+                table_cell
+                  textbox "产线2编号" [ref=356, loc=css:input[aria-label="产线2编号"]]
+                    text "P_LINE"
+                table_cell
+                  combobox "产线2工序" [ref=357, loc=css:select[aria-label="产线2工序"]]
+                    text "涂装"
+                table_cell
+                  combobox "产线2状态" [ref=358, loc=css:select[aria-label="产线2状态"]]
+                    text "启用"
+              table_row
+                table_cell
+                  textbox "产线3编号" [ref=359, loc=css:input[aria-label="产线3编号"]]
+                    text "A_LINE"
+                table_cell
+                  combobox "产线3工序" [ref=360, loc=css:select[aria-label="产线3工序"]]
+                    text "总装"
+                table_cell
+                  combobox "产线3状态" [ref=361, loc=css:select[aria-label="产线3状态"]]
+                    text "启用"
+              table_row
+                table_cell
+                  textbox "产线4编号" [ref=362, loc=css:input[aria-label="产线4编号"]]
+                    text "W_LINE_BACKUP"
+                table_cell
+                  combobox "产线4工序" [ref=363, loc=css:select[aria-label="产线4工序"]]
+                    text "焊装"
+                table_cell
+                  combobox "产线4状态" [ref=364, loc=css:select[aria-label="产线4状态"]]
+                    text "启用"
+            button [ref=365]
+              text "新增产线"
+            text "当前模型每个工序仅支持1条启用产线、单资源加工。新增产线可先停用，替换时先停用旧线；不提供无效的并行能力输入。"
+          container
+            container [ref=366]
+              text "生产节拍（每车分钟）"
+            table
+              table_row
+                table_cell
+                  text "配置"
+                table_cell
+                  text "车型"
+                table_cell
+                  text "颜色"
+                table_cell
+                  text "工序"
+                table_cell
+                  text "节拍（分钟）"
+              table_row
+                table_cell
+                  text "SUV_WHITE"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "WHITE"
+                table_cell
+                  text "焊装"
+                table_cell
+                  spinbutton "SUV_WHITE 焊装节拍" [ref=367, loc=css:input[aria-label="SUV_WHITE 焊装节拍"]]
+                    text "15"
+              table_row
+                table_cell
+                  text "SUV_WHITE"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "WHITE"
+                table_cell
+                  text "涂装"
+                table_cell
+                  spinbutton "SUV_WHITE 涂装节拍" [ref=368, loc=css:input[aria-label="SUV_WHITE 涂装节拍"]]
+                    text "35"
+              table_row
+                table_cell
+                  text "SUV_WHITE"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "WHITE"
+                table_cell
+                  text "总装"
+                table_cell
+                  spinbutton "SUV_WHITE 总装节拍" [ref=369, loc=css:input[aria-label="SUV_WHITE 总装节拍"]]
+                    text "25"
+              table_row
+                table_cell
+                  text "SUV_BLACK"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "BLACK"
+                table_cell
+                  text "焊装"
+                table_cell
+                  spinbutton "SUV_BLACK 焊装节拍" [ref=370, loc=css:input[aria-label="SUV_BLACK 焊装节拍"]]
+                    text "15"
+              table_row
+                table_cell
+                  text "SUV_BLACK"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "BLACK"
+                table_cell
+                  text "涂装"
+                table_cell
+                  spinbutton "SUV_BLACK 涂装节拍" [ref=371, loc=css:input[aria-label="SUV_BLACK 涂装节拍"]]
+                    text "35"
+              table_row
+                table_cell
+                  text "SUV_BLACK"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "BLACK"
+                table_cell
+                  text "总装"
+                table_cell
+                  spinbutton "SUV_BLACK 总装节拍" [ref=372, loc=css:input[aria-label="SUV_BLACK 总装节拍"]]
+                    text "25"
+        container
+          button [ref=373]
+            text "保存新版本"
+          button [ref=374]
+            text "放弃修改"
+  status
+    text "已保存基础资料版本 4。现有计划需显式引用。"
+多线限制
+[p1 "APS 计划与排程平台" | space "APS业务重构逐项页面验收"(7): 1 managed, 0 untracked — p1* "APS 计划与排程平台"]
+root
+  container
+    container "主导航"
+      container
+        text "APS"
+        container
+          text "计划与排程平台"
+          text "Advanced Planning & Scheduling"
+      container
+        anchor [ref=303, loc=href:/#/plans, url=http://127.0.0.1:18745/#/plans]
+          text "计划管理"
+        anchor [ref=304, loc=href:/#/rules, url=http://127.0.0.1:18745/#/rules]
+          text "基础数据"
+      container
+        text "演示服务已连接"
+        container
+          text "演示环境 · 未接入 ERP / MES"
+          text "提交不会产生生产指令"
+    container [ref=52]
+      container
+        container
+          container
+            table
+              table_row
+                table_cell
+                  textbox "产线2编号" [ref=375, loc=css:input[aria-label="产线2编号"]]
+                    text "P_LINE"
+                table_cell
+                  combobox "产线2工序" [ref=376, loc=css:select[aria-label="产线2工序"]]
+                    text "涂装"
+                table_cell
+                  combobox "产线2状态" [ref=377, loc=css:select[aria-label="产线2状态"]]
+                    text "启用"
+              table_row
+                table_cell
+                  textbox "产线3编号" [ref=378, loc=css:input[aria-label="产线3编号"]]
+                    text "A_LINE"
+                table_cell
+                  combobox "产线3工序" [ref=379, loc=css:select[aria-label="产线3工序"]]
+                    text "总装"
+                table_cell
+                  combobox "产线3状态" [ref=380, loc=css:select[aria-label="产线3状态"]]
+                    text "启用"
+              table_row
+                table_cell
+                  textbox "产线4编号" [ref=381, loc=css:input[aria-label="产线4编号"]]
+                    text "W_LINE_BACKUP"
+                table_cell
+                  combobox "产线4工序" [ref=382, loc=css:select[aria-label="产线4工序"]]
+                    text "焊装"
+                table_cell
+                  combobox "产线4状态" [ref=383, loc=css:select[aria-label="产线4状态"]]
+                    text "启用"
+            button [ref=384]
+              text "新增产线"
+            text "当前模型每个工序仅支持1条启用产线、单资源加工。新增产线可先停用，替换时先停用旧线；不提供无效的并行能力输入。"
+          container
+            container [ref=385]
+              text "生产节拍（每车分钟）"
+            table
+              table_row
+                table_cell
+                  text "配置"
+                table_cell
+                  text "车型"
+                table_cell
+                  text "颜色"
+                table_cell
+                  text "工序"
+                table_cell
+                  text "节拍（分钟）"
+              table_row
+                table_cell
+                  text "SUV_WHITE"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "WHITE"
+                table_cell
+                  text "焊装"
+                table_cell
+                  spinbutton "SUV_WHITE 焊装节拍" [ref=386, loc=css:input[aria-label="SUV_WHITE 焊装节拍"]]
+                    text "15"
+              table_row
+                table_cell
+                  text "SUV_WHITE"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "WHITE"
+                table_cell
+                  text "涂装"
+                table_cell
+                  spinbutton "SUV_WHITE 涂装节拍" [ref=387, loc=css:input[aria-label="SUV_WHITE 涂装节拍"]]
+                    text "35"
+              table_row
+                table_cell
+                  text "SUV_WHITE"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "WHITE"
+                table_cell
+                  text "总装"
+                table_cell
+                  spinbutton "SUV_WHITE 总装节拍" [ref=388, loc=css:input[aria-label="SUV_WHITE 总装节拍"]]
+                    text "25"
+              table_row
+                table_cell
+                  text "SUV_BLACK"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "BLACK"
+                table_cell
+                  text "焊装"
+                table_cell
+                  spinbutton "SUV_BLACK 焊装节拍" [ref=389, loc=css:input[aria-label="SUV_BLACK 焊装节拍"]]
+                    text "15"
+              table_row
+                table_cell
+                  text "SUV_BLACK"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "BLACK"
+                table_cell
+                  text "涂装"
+                table_cell
+                  spinbutton "SUV_BLACK 涂装节拍" [ref=390, loc=css:input[aria-label="SUV_BLACK 涂装节拍"]]
+                    text "35"
+              table_row
+                table_cell
+                  text "SUV_BLACK"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "BLACK"
+                table_cell
+                  text "总装"
+                table_cell
+                  spinbutton "SUV_BLACK 总装节拍" [ref=391, loc=css:input[aria-label="SUV_BLACK 总装节拍"]]
+                    text "25"
+        container
+          button [ref=392]
+            text "保存新版本"
+          button [ref=393]
+            text "放弃修改"
+  status
+    text "已保存基础资料版本 5。现有计划需显式引用。"
+停用备用线
+[p1 "APS 计划与排程平台" | space "APS业务重构逐项页面验收"(7): 1 managed, 0 untracked — p1* "APS 计划与排程平台"]
+root
+  container
+    container "主导航"
+      container
+        text "APS"
+        container
+          text "计划与排程平台"
+          text "Advanced Planning & Scheduling"
+      container
+        anchor [ref=303, loc=href:/#/plans, url=http://127.0.0.1:18745/#/plans]
+          text "计划管理"
+        anchor [ref=304, loc=href:/#/rules, url=http://127.0.0.1:18745/#/rules]
+          text "基础数据"
+      container
+        text "演示服务已连接"
+        container
+          text "演示环境 · 未接入 ERP / MES"
+          text "提交不会产生生产指令"
+    container [ref=52]
+      container
+        container
+          container
+            table
+              table_row
+                table_cell
+                  textbox "产线2编号" [ref=375, loc=css:input[aria-label="产线2编号"]]
+                    text "P_LINE"
+                table_cell
+                  combobox "产线2工序" [ref=376, loc=css:select[aria-label="产线2工序"]]
+                    text "涂装"
+                table_cell
+                  combobox "产线2状态" [ref=377, loc=css:select[aria-label="产线2状态"]]
+                    text "启用"
+              table_row
+                table_cell
+                  textbox "产线3编号" [ref=378, loc=css:input[aria-label="产线3编号"]]
+                    text "A_LINE"
+                table_cell
+                  combobox "产线3工序" [ref=379, loc=css:select[aria-label="产线3工序"]]
+                    text "总装"
+                table_cell
+                  combobox "产线3状态" [ref=380, loc=css:select[aria-label="产线3状态"]]
+                    text "启用"
+              table_row
+                table_cell
+                  textbox "产线4编号" [ref=381, loc=css:input[aria-label="产线4编号"]]
+                    text "W_LINE_BACKUP"
+                table_cell
+                  combobox "产线4工序" [ref=382, loc=css:select[aria-label="产线4工序"]]
+                    text "焊装"
+                table_cell
+                  combobox "产线4状态" [ref=383, loc=css:select[aria-label="产线4状态"]]
+                    text "停用"
+            button [ref=384]
+              text "新增产线"
+            text "当前模型每个工序仅支持1条启用产线、单资源加工。新增产线可先停用，替换时先停用旧线；不提供无效的并行能力输入。"
+          container
+            container [ref=385]
+              text "生产节拍（每车分钟）"
+            table
+              table_row
+                table_cell
+                  text "配置"
+                table_cell
+                  text "车型"
+                table_cell
+                  text "颜色"
+                table_cell
+                  text "工序"
+                table_cell
+                  text "节拍（分钟）"
+              table_row
+                table_cell
+                  text "SUV_WHITE"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "WHITE"
+                table_cell
+                  text "焊装"
+                table_cell
+                  spinbutton "SUV_WHITE 焊装节拍" [ref=386, loc=css:input[aria-label="SUV_WHITE 焊装节拍"]]
+                    text "15"
+              table_row
+                table_cell
+                  text "SUV_WHITE"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "WHITE"
+                table_cell
+                  text "涂装"
+                table_cell
+                  spinbutton "SUV_WHITE 涂装节拍" [ref=387, loc=css:input[aria-label="SUV_WHITE 涂装节拍"]]
+                    text "35"
+              table_row
+                table_cell
+                  text "SUV_WHITE"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "WHITE"
+                table_cell
+                  text "总装"
+                table_cell
+                  spinbutton "SUV_WHITE 总装节拍" [ref=388, loc=css:input[aria-label="SUV_WHITE 总装节拍"]]
+                    text "25"
+              table_row
+                table_cell
+                  text "SUV_BLACK"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "BLACK"
+                table_cell
+                  text "焊装"
+                table_cell
+                  spinbutton "SUV_BLACK 焊装节拍" [ref=389, loc=css:input[aria-label="SUV_BLACK 焊装节拍"]]
+                    text "15"
+              table_row
+                table_cell
+                  text "SUV_BLACK"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "BLACK"
+                table_cell
+                  text "涂装"
+                table_cell
+                  spinbutton "SUV_BLACK 涂装节拍" [ref=390, loc=css:input[aria-label="SUV_BLACK 涂装节拍"]]
+                    text "35"
+              table_row
+                table_cell
+                  text "SUV_BLACK"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "BLACK"
+                table_cell
+                  text "总装"
+                table_cell
+                  spinbutton "SUV_BLACK 总装节拍" [ref=391, loc=css:input[aria-label="SUV_BLACK 总装节拍"]]
+                    text "25"
+        container
+          button [ref=392]
+            text "保存新版本"
+          button [ref=393]
+            text "放弃修改"
+  status
+    text "已保存基础资料版本 5。现有计划需显式引用。"
+保存6
+[p1 "APS 计划与排程平台" | space "APS业务重构逐项页面验收"(7): 1 managed, 0 untracked — p1* "APS 计划与排程平台"]
+root
+  container
+    container "主导航"
+      container
+        text "APS"
+        container
+          text "计划与排程平台"
+          text "Advanced Planning & Scheduling"
+      container
+        anchor [ref=303, loc=href:/#/plans, url=http://127.0.0.1:18745/#/plans]
+          text "计划管理"
+        anchor [ref=304, loc=href:/#/rules, url=http://127.0.0.1:18745/#/rules]
+          text "基础数据"
+      container
+        text "演示服务已连接"
+        container
+          text "演示环境 · 未接入 ERP / MES"
+          text "提交不会产生生产指令"
+    container [ref=52]
+      container
+        container
+          container
+            table
+              table_row
+                table_cell
+                  textbox "产线2编号" [ref=394, loc=css:input[aria-label="产线2编号"]]
+                    text "P_LINE"
+                table_cell
+                  combobox "产线2工序" [ref=395, loc=css:select[aria-label="产线2工序"]]
+                    text "涂装"
+                table_cell
+                  combobox "产线2状态" [ref=396, loc=css:select[aria-label="产线2状态"]]
+                    text "启用"
+              table_row
+                table_cell
+                  textbox "产线3编号" [ref=397, loc=css:input[aria-label="产线3编号"]]
+                    text "A_LINE"
+                table_cell
+                  combobox "产线3工序" [ref=398, loc=css:select[aria-label="产线3工序"]]
+                    text "总装"
+                table_cell
+                  combobox "产线3状态" [ref=399, loc=css:select[aria-label="产线3状态"]]
+                    text "启用"
+              table_row
+                table_cell
+                  textbox "产线4编号" [ref=400, loc=css:input[aria-label="产线4编号"]]
+                    text "W_LINE_BACKUP"
+                table_cell
+                  combobox "产线4工序" [ref=401, loc=css:select[aria-label="产线4工序"]]
+                    text "焊装"
+                table_cell
+                  combobox "产线4状态" [ref=402, loc=css:select[aria-label="产线4状态"]]
+                    text "停用"
+            button [ref=403]
+              text "新增产线"
+            text "当前模型每个工序仅支持1条启用产线、单资源加工。新增产线可先停用，替换时先停用旧线；不提供无效的并行能力输入。"
+          container
+            container [ref=404]
+              text "生产节拍（每车分钟）"
+            table
+              table_row
+                table_cell
+                  text "配置"
+                table_cell
+                  text "车型"
+                table_cell
+                  text "颜色"
+                table_cell
+                  text "工序"
+                table_cell
+                  text "节拍（分钟）"
+              table_row
+                table_cell
+                  text "SUV_WHITE"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "WHITE"
+                table_cell
+                  text "焊装"
+                table_cell
+                  spinbutton "SUV_WHITE 焊装节拍" [ref=405, loc=css:input[aria-label="SUV_WHITE 焊装节拍"]]
+                    text "15"
+              table_row
+                table_cell
+                  text "SUV_WHITE"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "WHITE"
+                table_cell
+                  text "涂装"
+                table_cell
+                  spinbutton "SUV_WHITE 涂装节拍" [ref=406, loc=css:input[aria-label="SUV_WHITE 涂装节拍"]]
+                    text "35"
+              table_row
+                table_cell
+                  text "SUV_WHITE"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "WHITE"
+                table_cell
+                  text "总装"
+                table_cell
+                  spinbutton "SUV_WHITE 总装节拍" [ref=407, loc=css:input[aria-label="SUV_WHITE 总装节拍"]]
+                    text "25"
+              table_row
+                table_cell
+                  text "SUV_BLACK"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "BLACK"
+                table_cell
+                  text "焊装"
+                table_cell
+                  spinbutton "SUV_BLACK 焊装节拍" [ref=408, loc=css:input[aria-label="SUV_BLACK 焊装节拍"]]
+                    text "15"
+              table_row
+                table_cell
+                  text "SUV_BLACK"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "BLACK"
+                table_cell
+                  text "涂装"
+                table_cell
+                  spinbutton "SUV_BLACK 涂装节拍" [ref=409, loc=css:input[aria-label="SUV_BLACK 涂装节拍"]]
+                    text "35"
+              table_row
+                table_cell
+                  text "SUV_BLACK"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "BLACK"
+                table_cell
+                  text "总装"
+                table_cell
+                  spinbutton "SUV_BLACK 总装节拍" [ref=410, loc=css:input[aria-label="SUV_BLACK 总装节拍"]]
+                    text "25"
+        container
+          button [ref=411]
+            text "保存新版本"
+          button [ref=412]
+            text "放弃修改"
+  status
+    text "已保存基础资料版本 6。现有计划需显式引用。"

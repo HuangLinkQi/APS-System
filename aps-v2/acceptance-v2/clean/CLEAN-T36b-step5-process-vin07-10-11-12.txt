@@ -1,0 +1,126 @@
+[p1 "APS 计划与排程平台" | space "APS业务重构逐项页面验收"(7): 1 managed, 0 untracked — p1* "APS 计划与排程平台"]
+root
+  container "主导航"
+    container
+      text "APS"
+      container
+        text "计划与排程平台"
+        text "Advanced Planning & Scheduling"
+    container
+      anchor [ref=2797, url=http://127.0.0.1:18745/#/plans]
+        text "计划管理"
+      anchor [ref=2798, loc=href:/#/rules, url=http://127.0.0.1:18745/#/rules]
+        text "基础数据"
+    container
+      text "演示服务已连接"
+      container
+        text "演示环境 · 未接入 ERP / MES"
+        text "提交不会产生生产指令"
+  container [ref=2729]
+    container
+      table
+        table_row
+          table_cell
+            text "VIN_06"
+          table_cell
+            text "涂装"
+          table_cell
+            text "P_LINE"
+          table_cell
+            text "2925"
+          table_cell
+            text "2935"
+          table_cell
+            text "2970"
+          table_cell
+            text "2970"
+        table_row
+          table_cell
+            text "VIN_11"
+          table_cell
+            text "焊装"
+          table_cell
+            text "W_LINE"
+          table_cell
+            text "2925"
+          table_cell
+            text "2925"
+          table_cell
+            text "2940"
+          table_cell
+            text "2970"
+        table_row
+          table_cell
+            text "VIN_09"
+          table_cell
+            text "总装"
+          table_cell
+            text "A_LINE"
+          table_cell
+            text "2940"
+          table_cell
+            text "2940"
+          table_cell
+            text "2970"
+          table_cell
+            text "2970"
+        table_row
+          table_cell
+            text "VIN_07"
+          table_cell
+            text "涂装"
+          table_cell
+            text "P_LINE"
+          table_cell
+            text "2970"
+          table_cell
+            text "2980"
+          table_cell
+            text "3015"
+          table_cell
+            text "3015"
+        table_row
+          table_cell
+            text "VIN_12"
+          table_cell
+            text "焊装"
+          table_cell
+            text "W_LINE"
+          table_cell
+            text "2970"
+          table_cell
+            text "2970"
+          table_cell
+            text "2985"
+          table_cell
+            text "—"
+        table_row
+          table_cell
+            text "VIN_06"
+          table_cell
+            text "总装"
+          table_cell
+            text "A_LINE"
+          table_cell
+            text "2985"
+          table_cell
+            text "2985"
+          table_cell
+            text "3010"
+          table_cell
+            text "3010"
+      container [ref=2806]
+        text "未完成订单 · 4（未排0台，已排未完成4台）"
+      container [ref=2807]
+        text "校验项目"
+      container [ref=2808]
+        text "全部计算指标"
+    container
+      heading
+        text "4 · 提交与审批"
+      paragraph
+        text "选择可提交候选后交给主管审批。未完成车辆或校验不通过将阻断提交。"
+      container
+        button [ref=2809]
+          text "提交所选方案"
+        text "不可提交：存在 4 台未完工订单（未排 0 台、已排未完工 4 台）：VIN_07、VIN_10、VIN_11、VIN_12"

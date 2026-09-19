@@ -1,0 +1,81 @@
+[p1 "APS 计划与排程平台" | space "APS业务重构逐项页面验收"(7): 1 managed, 0 untracked — p1* "APS 计划与排程平台"]
+root
+  container
+    container "主导航"
+      container
+        text "APS"
+        container
+          text "计划与排程平台"
+          text "Advanced Planning & Scheduling"
+      container
+        anchor [ref=553, url=http://127.0.0.1:18745/#/plans]
+          text "计划管理"
+        anchor [ref=554, loc=href:/#/rules, url=http://127.0.0.1:18745/#/rules]
+          text "基础数据"
+      container
+        text "演示服务已连接"
+        container
+          text "演示环境 · 未接入 ERP / MES"
+          text "提交不会产生生产指令"
+    container [ref=557]
+      container
+        container [ref=570]
+          text "各工序时间 · 从场景起点计分钟"
+        container [ref=571]
+          text "未完成车辆 · 0"
+        container [ref=572]
+          text "校验项目"
+        container [ref=573]
+          text "全部计算指标"
+      container
+        heading
+          text "4 · 提交与审批"
+        paragraph
+          text "选择可提交候选后交给主管审批。未完成车辆或校验不通过将阻断提交。"
+        button [ref=574]
+          text "提交所选方案"
+      container
+        heading
+          text "计算历史"
+        table
+          table_row
+            table_cell
+              text "任务编号"
+            table_cell
+              text "状态"
+            table_cell
+              text "开始时间"
+            table_cell
+              text "操作"
+          table_row
+            table_cell
+              text "640348e236c6"
+            table_cell
+              text "已完成"
+            table_cell
+              text "2026-09-18T18:05:10+00:00"
+            table_cell
+              button [ref=575]
+                text "查看历史计算"
+          table_row
+            table_cell
+              text "4c9f5f09e22a"
+            table_cell
+              text "已完成"
+            table_cell
+              text "2026-09-18T18:03:31+00:00"
+            table_cell
+              button [ref=576]
+                text "查看历史计算"
+  dialog "确认提交所选方案"
+    heading
+      text "确认提交所选方案"
+    paragraph
+      text "计划：T03-验收新草稿"
+    paragraph
+      text "方案：综合优化"
+    text "提交后输入和计算将锁定。仅提交本机演示审批，不产生生产指令。"
+    button [ref=577]
+      text "确认提交"
+    button [ref=578]
+      text "取消"

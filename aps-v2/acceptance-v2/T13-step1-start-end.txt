@@ -1,0 +1,131 @@
+[p1 "APS 计划与排程平台" | space "APS业务重构逐项页面验收"(7): 1 managed, 0 untracked — p1* "APS 计划与排程平台"]
+root
+  container
+    container "主导航"
+      container
+        text "APS"
+        container
+          text "计划与排程平台"
+          text "Advanced Planning & Scheduling"
+      container
+        anchor [ref=1066, loc=href:/#/plans, url=http://127.0.0.1:18745/#/plans]
+          text "计划管理"
+        anchor [ref=1067, loc=href:/#/rules, url=http://127.0.0.1:18745/#/rules]
+          text "基础数据"
+      container
+        text "演示服务已连接"
+        container
+          text "演示环境 · 未接入 ERP / MES"
+          text "提交不会产生生产指令"
+    container [ref=1036]
+      container
+        container
+          table
+            table_row
+              table_cell
+                text "SEDAN_RED"
+              table_cell
+                text "SEDAN"
+              table_cell
+                text "RED"
+              table_cell
+                text "涂装"
+              table_cell
+                spinbutton "SEDAN_RED 涂装节拍" [ref=1068, loc=css:input[aria-label="SEDAN_RED 涂装节拍"]]
+                  text "35"
+            table_row
+              table_cell
+                text "SEDAN_RED"
+              table_cell
+                text "SEDAN"
+              table_cell
+                text "RED"
+              table_cell
+                text "总装"
+              table_cell
+                spinbutton "SEDAN_RED 总装节拍" [ref=1069, loc=css:input[aria-label="SEDAN_RED 总装节拍"]]
+                  text "30"
+            table_row
+              table_cell
+                text "PULLOUT_CAR"
+              table_cell
+                text "SUV"
+              table_cell
+                text "WHITE"
+              table_cell
+                text "焊装"
+              table_cell
+                spinbutton "PULLOUT_CAR 焊装节拍" [ref=1070, loc=css:input[aria-label="PULLOUT_CAR 焊装节拍"]]
+                  text "15"
+            table_row
+              table_cell
+                text "PULLOUT_CAR"
+              table_cell
+                text "SUV"
+              table_cell
+                text "WHITE"
+              table_cell
+                text "涂装"
+              table_cell
+                spinbutton "PULLOUT_CAR 涂装节拍" [ref=1071, loc=css:input[aria-label="PULLOUT_CAR 涂装节拍"]]
+                  text "30"
+          container
+            container [ref=1072]
+              text "生产日历"
+            table
+              table_row
+                table_cell
+                  text "班次"
+                table_cell
+                  text "第几天"
+                table_cell
+                  text "当日开始分钟"
+                table_cell
+                  text "当日结束分钟"
+              table_row
+                table_cell
+                  text "D0_S1"
+                table_cell
+                  spinbutton "班次1日期" [ref=1073, loc=css:input[aria-label="班次1日期"]]
+                    text "1"
+                table_cell
+                  spinbutton "班次1开始" [ref=1074, loc=css:input[aria-label="班次1开始"]]
+                    text "100"
+                table_cell
+                  spinbutton "班次1结束" [ref=1075, loc=css:input[aria-label="班次1结束"]]
+                    text "50"
+              table_row
+                table_cell
+                  text "D1_S1"
+                table_cell
+                  spinbutton "班次2日期" [ref=1076, loc=css:input[aria-label="班次2日期"]]
+                    text "2"
+                table_cell
+                  spinbutton "班次2开始" [ref=1077, loc=css:input[aria-label="班次2开始"]]
+                    text "0"
+                table_cell
+                  spinbutton "班次2结束" [ref=1078, loc=css:input[aria-label="班次2结束"]]
+                    text "480"
+              table_row
+                table_cell
+                  text "D2_S1"
+                table_cell
+                  spinbutton "班次3日期" [ref=1079, loc=css:input[aria-label="班次3日期"]]
+                    text "3"
+                table_cell
+                  spinbutton "班次3开始" [ref=1080, loc=css:input[aria-label="班次3开始"]]
+                    text "0"
+                table_cell
+                  spinbutton "班次3结束" [ref=1081, loc=css:input[aria-label="班次3结束"]]
+                    text "480"
+          container [ref=1082]
+            text "工序衔接"
+          container [ref=1083]
+            text "切换规则（演示假设）"
+        container
+          button [ref=1084]
+            text "保存新版本"
+          button [ref=1085]
+            text "放弃修改"
+  status
+    text "班次开始必须早于结束，且不能超出当日或计算时域"

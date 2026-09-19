@@ -1,0 +1,97 @@
+[p1 "APS 计划与排程平台" | space "APS业务重构逐项页面验收"(7): 1 managed, 0 untracked — p1* "APS 计划与排程平台"]
+root
+  container "主导航"
+    container
+      text "APS"
+      container
+        text "计划与排程平台"
+        text "Advanced Planning & Scheduling"
+    container
+      anchor [ref=2507, url=http://127.0.0.1:18745/#/plans]
+        text "计划管理"
+      anchor [ref=2508, loc=href:/#/rules, url=http://127.0.0.1:18745/#/rules]
+        text "基础数据"
+    container
+      text "演示服务已连接"
+      container
+        text "演示环境 · 未接入 ERP / MES"
+        text "提交不会产生生产指令"
+  container [ref=2427]
+    container
+      container
+        container [ref=2516]
+          text "未完成订单 · 4（未排0台，已排未完成4台）"
+        container
+          table
+            table_row
+              table_cell
+                text "车辆"
+              table_cell
+                text "订单号"
+              table_cell
+                text "配置"
+              table_cell
+                text "状态"
+              table_cell
+                text "原因"
+            table_row
+              table_cell
+                text "VIN_07"
+              table_cell
+                text "VIN_07"
+              table_cell
+                text "SUV_BLACK"
+              table_cell
+                text "已排未完成(已开工未完工)"
+              table_cell
+                text "已投入序列并开工但未能在计算时域内到达末道工序完工（在制未出线）"
+            table_row
+              table_cell
+                text "VIN_10"
+              table_cell
+                text "VIN_10"
+              table_cell
+                text "SUV_BLACK"
+              table_cell
+                text "已排未完成(已开工未完工)"
+              table_cell
+                text "已投入序列并开工但未能在计算时域内到达末道工序完工（在制未出线）"
+            table_row
+              table_cell
+                text "VIN_11"
+              table_cell
+                text "VIN_11"
+              table_cell
+                text "SUV_WHITE"
+              table_cell
+                text "已排未完成(已开工未完工)"
+              table_cell
+                text "已投入序列并开工但未能在计算时域内到达末道工序完工（在制未出线）"
+            table_row
+              table_cell
+                text "VIN_12"
+              table_cell
+                text "VIN_12"
+              table_cell
+                text "SUV_WHITE"
+              table_cell
+                text "已排未完成(已开工未完工)"
+              table_cell
+                text "已投入序列并开工但未能在计算时域内到达末道工序完工（在制未出线）"
+          paragraph
+            text "按有效需求（净额后订单,已剔除取消且未开工）减去真正完成集合判定;未排入与已排未完成都会阻断提交,系统不编造具体缺料归因。"
+      container [ref=2517]
+        text "校验项目"
+      container [ref=2518]
+        text "全部计算指标"
+    container
+      heading
+        text "4 · 提交与审批"
+      paragraph
+        text "选择可提交候选后交给主管审批。未完成车辆或校验不通过将阻断提交。"
+      container
+        button [ref=2519]
+          text "提交所选方案"
+        text "不可提交：存在 4 台未完工订单（未排 0 台、已排未完工 4 台）：VIN_07、VIN_10、VIN_11、VIN_12"
+    heading
+      text "计算历史"

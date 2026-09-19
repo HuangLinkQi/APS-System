@@ -1,0 +1,86 @@
+[p1 "APS 计划与排程平台" | space "APS业务重构逐项页面验收"(7): 1 managed, 0 untracked — p1* "APS 计划与排程平台"]
+root
+  container "主导航"
+    container
+      text "APS"
+      container
+        text "计划与排程平台"
+        text "Advanced Planning & Scheduling"
+    container
+      anchor [ref=1823, loc=href:/#/plans, url=http://127.0.0.1:18745/#/plans]
+        text "计划管理"
+      anchor [ref=1824, loc=href:/#/rules, url=http://127.0.0.1:18745/#/rules]
+        text "基础数据"
+    container
+      text "演示服务已连接"
+      container
+        text "演示环境 · 未接入 ERP / MES"
+        text "提交不会产生生产指令"
+  container
+    container
+      combobox "模拟身份" [ref=1825, loc=css:select[aria-label="模拟身份"]]
+      button [ref=1826]
+    container [ref=1827]
+      container
+        heading
+          text "基础数据"
+        paragraph
+          text "工艺负责人维护，计划引用版本；保存不会悄悄覆盖历史计划。"
+      text "当前可维护演示基础资料。真实企业参数须另行确认，不能直接用于生产。"
+      container
+        text "资料范围"
+        combobox [ref=1850]
+          text "F1 · 正常生产 · 12辆基准"
+      container
+        heading
+          text "版本 50 · F1"
+        paragraph
+          text "来源：显式加载的演示场景。更新人：工艺负责人 · F1 · 2026-09-18T19:02:55+00:00"
+        status
+          text "焊装需恰好1条启用产线；当前引擎不支持同工序多产线调度"
+        container
+          container [ref=1851]
+            text "产线资源"
+          table
+            table_row
+              table_cell
+                text "编号"
+              table_cell
+                text "工序"
+              table_cell
+                text "状态"
+            table_row
+              table_cell
+                textbox "产线1编号" [ref=1852, loc=css:input[aria-label="产线1编号"]]
+                  text "W_LINE"
+              table_cell
+                combobox "产线1工序" [ref=1853, loc=css:select[aria-label="产线1工序"]]
+                  text "焊装"
+              table_cell
+                combobox "产线1状态" [ref=1854, loc=css:select[aria-label="产线1状态"]]
+                  text "停用"
+            table_row
+              table_cell
+                textbox "产线2编号" [ref=1855, loc=css:input[aria-label="产线2编号"]]
+                  text "P_LINE"
+              table_cell
+                combobox "产线2工序" [ref=1856, loc=css:select[aria-label="产线2工序"]]
+                  text "涂装"
+              table_cell
+                combobox "产线2状态" [ref=1857, loc=css:select[aria-label="产线2状态"]]
+                  text "启用"
+            table_row
+              table_cell
+                textbox "产线3编号" [ref=1858, loc=css:input[aria-label="产线3编号"]]
+                  text "A_LINE"
+              table_cell
+                combobox "产线3工序" [ref=1859, loc=css:select[aria-label="产线3工序"]]
+                  text "总装"
+              table_cell
+                combobox "产线3状态" [ref=1860, loc=css:select[aria-label="产线3状态"]]
+                  text "启用"
+            table_row
+              table_cell
+                textbox "产线4编号" [ref=1861, loc=css:input[aria-label="产线4编号"]]
+              table_cell
+              table_cell

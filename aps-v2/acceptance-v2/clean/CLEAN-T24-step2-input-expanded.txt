@@ -1,0 +1,135 @@
+[p1 "APS 计划与排程平台" | space "APS业务重构逐项页面验收"(7): 1 managed, 0 untracked — p1* "APS 计划与排程平台"]
+root
+  container "主导航"
+    container
+      text "APS"
+      container
+        text "计划与排程平台"
+        text "Advanced Planning & Scheduling"
+    container
+      anchor [ref=2190, loc=href:/#/plans, url=http://127.0.0.1:18745/#/plans]
+        text "计划管理"
+      anchor [ref=2191, loc=href:/#/rules, url=http://127.0.0.1:18745/#/rules]
+        text "基础数据"
+    container
+      text "演示服务已连接"
+      container
+        text "演示环境 · 未接入 ERP / MES"
+        text "提交不会产生生产指令"
+  container [ref=2176]
+    container
+      container [ref=2192]
+        text "产线资源"
+      container [ref=2193]
+        text "生产节拍（每车分钟）"
+      container
+        container [ref=2194]
+          text "生产日历"
+        table
+          table_row
+            table_cell
+              text "班次"
+            table_cell
+              text "第几天"
+            table_cell
+              text "当日开始分钟"
+            table_cell
+              text "当日结束分钟"
+          table_row
+            table_cell
+              text "D0_S1"
+            table_cell
+              text "1"
+            table_cell
+              text "0"
+            table_cell
+              text "480"
+          table_row
+            table_cell
+              text "D1_S1"
+            table_cell
+              text "2"
+            table_cell
+              text "0"
+            table_cell
+              text "480"
+          table_row
+            table_cell
+              text "D2_S1"
+            table_cell
+              text "3"
+            table_cell
+              text "0"
+            table_cell
+              text "480"
+      container
+        container [ref=2195]
+          text "工序衔接"
+        table
+          table_row
+            table_cell
+              text "缓冲区"
+            table_cell
+              text "起点 → 终点"
+            table_cell
+              text "缓冲容量（辆）"
+            table_cell
+              text "固定转运（分钟）"
+          table_row
+            table_cell
+              text "BUF_WP"
+            table_cell
+              text "W->P"
+            table_cell
+              text "2"
+            table_cell
+              text "2"
+          table_row
+            table_cell
+              text "BUF_PA"
+            table_cell
+              text "P->A"
+            table_cell
+              text "2"
+            table_cell
+              text "2"
+      container
+        container [ref=2196]
+          text "切换规则（演示假设）"
+        table
+          table_row
+            table_cell
+              text "配置"
+            table_cell
+              text "工序"
+            table_cell
+              text "前值 → 后值"
+            table_cell
+              text "准备分钟"
+          table_row
+            table_cell
+              text "SUV_WHITE"
+            table_cell
+              text "焊装"
+            table_cell
+              text "SUV->SEDAN"
+            table_cell
+              text "5"
+          table_row
+            table_cell
+              text "SUV_WHITE"
+            table_cell
+              text "焊装"
+            table_cell
+              text "SEDAN->SUV"
+            table_cell
+              text "5"
+          table_row
+            table_cell
+              text "SUV_WHITE"
+            table_cell
+              text "涂装"
+            table_cell
+              text "WHITE->BLACK"
+            table_cell
+              text "10"

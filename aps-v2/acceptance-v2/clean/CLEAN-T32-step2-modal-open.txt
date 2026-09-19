@@ -1,0 +1,171 @@
+[p1 "APS 计划与排程平台" | space "APS业务重构逐项页面验收"(7): 1 managed, 0 untracked — p1* "APS 计划与排程平台"]
+root
+  container
+    container "主导航"
+      container
+        text "APS"
+        container
+          text "计划与排程平台"
+          text "Advanced Planning & Scheduling"
+      container
+        anchor [ref=2403, loc=href:/#/plans, url=http://127.0.0.1:18745/#/plans]
+          text "计划管理"
+        anchor [ref=2404, loc=href:/#/rules, url=http://127.0.0.1:18745/#/rules]
+          text "基础数据"
+      container
+        text "演示服务已连接"
+        container
+          text "演示环境 · 未接入 ERP / MES"
+          text "提交不会产生生产指令"
+    container
+      container
+        container
+          text "APS"
+          text "计划管理"
+        container
+          text "计划员 A · F1 · F1 / FACTORY_1"
+          container
+            text "模拟身份"
+            combobox "模拟身份" [ref=2174, loc=css:select[aria-label="模拟身份"]]
+              text "计划员 A · F1"
+          button [ref=2175]
+            text "刷新"
+      container [ref=2176]
+        container
+          container
+            heading
+              text "计划管理"
+            paragraph
+              text "从业务数据生成排程方案。无预置计划，无预置计算结果。"
+          button [ref=2405]
+            text "新建排程"
+        container
+          container
+            text "搜索计划"
+            searchbox [ref=2406, loc=css:input[placeholder="输入名称或编号"]]
+              text "输入名称或编号"
+          container
+            text "状态"
+            combobox [ref=2407]
+              text "全部状态"
+          button [ref=2408]
+            text "刷新列表"
+        container
+          heading
+            text "计划列表 · 21 条"
+          table
+            table_row
+              table_cell
+                text "计划名称"
+              table_cell
+                text "工厂"
+              table_cell
+                text "状态"
+              table_cell
+                text "数据来源"
+              table_cell
+                text "历史计算"
+              table_cell
+                text "操作"
+            table_row
+              table_cell
+                text "CLEAN-T28-瓶颈"
+              table_cell
+                text "F1"
+              table_cell
+                text "计算完成"
+              table_cell
+                text "场景6：小颜色交织与铝车身工艺双瓶颈 (Color & Alum Bottleneck)"
+              table_cell
+                text "1"
+              table_cell
+                anchor [ref=2409, loc=href:/#/plan/9db9307296f6, url=http://127.0.0.1:18745/#/plan/9db9307296f6]
+                  text "打开"
+            table_row
+              table_cell
+                text "CLEAN-T27-撤单"
+              table_cell
+                text "F1"
+              table_cell
+                text "计算完成"
+              table_cell
+                text "场景5：在制保护与订单撤单响应 (Order Cancellation)"
+              table_cell
+                text "1"
+              table_cell
+                anchor [ref=2410, loc=href:/#/plan/7dc91ae23290, url=http://127.0.0.1:18745/#/plan/7dc91ae23290]
+                  text "打开"
+            table_row
+              table_cell
+                text "CLEAN-T26-紧急"
+              table_cell
+                text "F1"
+              table_cell
+                text "计算完成"
+              table_cell
+                text "场景4：紧急 VIP 加急插单冲击 (VIP Rush Tight Due)"
+              table_cell
+                text "1"
+              table_cell
+                anchor [ref=2411, loc=href:/#/plan/91334a17199d, url=http://127.0.0.1:18745/#/plan/91334a17199d]
+                  text "打开"
+            table_row
+              table_cell
+                text "CLEAN-T25-延期"
+              table_cell
+                text "F1"
+              table_cell
+                text "计算完成"
+              table_cell
+                text "场景2：关键物料突发延期断料 (Supply Delay Stress)"
+              table_cell
+                text "1"
+              table_cell
+                anchor [ref=2412, loc=href:/#/plan/1975e09e16a1, url=http://127.0.0.1:18745/#/plan/1975e09e16a1]
+                  text "打开"
+            table_row
+              table_cell
+                text "CLEAN-T24-缺料"
+              table_cell
+                text "F1"
+              table_cell
+                text "计算完成"
+              table_cell
+                text "场景3：上游严重缺料断料拦截 (Material Shortage)"
+              table_cell
+                text "1"
+              table_cell
+                anchor [ref=2413, loc=href:/#/plan/3bb75ac2a9d1, url=http://127.0.0.1:18745/#/plan/3bb75ac2a9d1]
+                  text "打开"
+            table_row
+              table_cell
+                text "CLEAN-T19-节拍对照"
+              table_cell
+                text "F1"
+              table_cell
+              table_cell
+                text "正常生产 · 12辆基准"
+              table_cell
+                text "3"
+              table_cell
+                anchor [ref=2414, loc=href:/#/plan/f779b96d8330, url=http://127.0.0.1:18745/#/plan/f779b96d8330]
+                  text "打开"
+  dialog "新建排程"
+    heading
+      text "新建排程"
+    form
+      container
+        text "计划名称"
+        textbox [ref=2415, loc=css:input[name="name"]]
+          text "例如：验收-正常生产-01"
+      container
+        text "工厂"
+        combobox [ref=2416, loc=css:select[name="factory"]]
+          text "F1"
+      paragraph
+        text "计划类型：W+3演示排程。长期计划尚未开放。"
+      container
+        button [ref=2417]
+          text "下一步"
+        button [ref=2418]
+          text "取消"

@@ -1,0 +1,136 @@
+[p1 "APS 计划与排程平台" | space "APS业务重构逐项页面验收"(7): 1 managed, 0 untracked — p1* "APS 计划与排程平台"]
+root
+  container
+    container "主导航"
+      container
+        text "APS"
+        container
+          text "计划与排程平台"
+          text "Advanced Planning & Scheduling"
+      container
+        anchor [ref=2750, url=http://127.0.0.1:18745/#/plans]
+          text "计划管理"
+        anchor [ref=2751, loc=href:/#/rules, url=http://127.0.0.1:18745/#/rules]
+          text "基础数据"
+      container
+        text "演示服务已连接"
+        container
+          text "演示环境 · 未接入 ERP / MES"
+          text "提交不会产生生产指令"
+    container [ref=2729]
+      container
+        anchor [ref=2754, loc=href:/#/plan/a9b10a579b37/input, url=http://127.0.0.1:18745/#/plan/a9b10a579b37/input]
+          text "查看本次输入"
+        button [ref=2755]
+          text "前往基础数据"
+        button [ref=2756]
+          text "引用最新基础数据"
+        button [ref=2757]
+          text "更换演示场景"
+      container
+        heading
+          text "2 · 生成方案"
+        paragraph
+          text "系统比较交期、颜色集中、负荷均衡和综合优化四种候选，不要求输入算法参数。"
+        button [ref=2758]
+          text "生成方案"
+      container
+        heading
+          text "3 · 查看并选择方案"
+        container
+          button [ref=2759]
+            text "交期优先"
+          button [ref=2760]
+            text "颜色集中"
+          button [ref=2761]
+            text "负荷均衡"
+          button [ref=2762]
+            text "综合优化"
+        container
+          heading
+            text "综合优化"
+          container
+            container
+              text "未完成订单"
+              text "0"
+              text "台（未排0+已排未完成0)"
+            container
+              text "完成准时率"
+              text "100.0"
+              text "%"
+            container
+              text "总拖期"
+              text "0"
+              text "分钟（加权）"
+            container
+              text "换色次数"
+              text "5"
+              text "次"
+            container
+              text "完工跨度"
+              text "2959"
+              text "分钟"
+          text "当前模型独立校验通过；不代表完整工厂工艺均已覆盖。"
+          container
+            container [ref=2763]
+              text "焊装投入顺序 · 12 辆"
+            table
+              table_row
+                table_cell
+                  text "顺序"
+                table_cell
+                  text "车辆"
+                table_cell
+                  text "订单"
+                table_cell
+                  text "车型"
+                table_cell
+                  text "颜色"
+                table_cell
+                  text "优先级"
+                table_cell
+                  text "交期（第几天）"
+              table_row
+                table_cell
+                  text "1"
+                table_cell
+                  text "VIN_07"
+                table_cell
+                  text "VIN_07"
+                table_cell
+                  text "SUV"
+                table_cell
+                  text "BLACK"
+                table_cell
+                  text "2"
+                table_cell
+                  text "2"
+              table_row
+                table_cell
+                table_cell
+                table_cell
+                table_cell
+                table_cell
+                table_cell
+                table_cell
+  dialog "当前为演示数据，请选择你要测试的场景"
+    heading
+      text "当前为演示数据，请选择你要测试的场景"
+    text "选择后自动准备全部输入，不需要后续重复导入。更换场景将清除本计划当前计算结果，历史任务保留。"
+    container
+      button [ref=2764]
+        text "正常生产 · 12辆基准"
+      button [ref=2765]
+        text "混流生产 · 产能压力"
+      button [ref=2766]
+        text "关键物料延期"
+      button [ref=2767]
+        text "关键物料短缺"
+      button [ref=2768]
+        text "紧急订单事件"
+      button [ref=2769]
+        text "订单撤销事件"
+      button [ref=2770]
+        text "颜色与节拍瓶颈"
+    button [ref=2771]
+      text "取消选择"

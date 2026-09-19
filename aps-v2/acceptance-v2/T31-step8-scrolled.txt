@@ -1,0 +1,65 @@
+[p1 "APS 计划与排程平台" | space "APS业务重构逐项页面验收"(7): 1 managed, 0 untracked — p1* "APS 计划与排程平台"]
+root
+  container "主导航"
+    container
+      text "APS"
+      container
+        text "计划与排程平台"
+        text "Advanced Planning & Scheduling"
+    container
+      anchor [ref=703, url=http://127.0.0.1:18745/#/plans]
+        text "计划管理"
+      anchor [ref=704, loc=href:/#/rules, url=http://127.0.0.1:18745/#/rules]
+        text "基础数据"
+    container
+      text "演示服务已连接"
+      container
+        text "演示环境 · 未接入 ERP / MES"
+        text "提交不会产生生产指令"
+  container
+    container [ref=591]
+      container
+        container [ref=714]
+          text "未完成车辆 · 0"
+        container [ref=715]
+          text "校验项目"
+        container [ref=716]
+          text "全部计算指标"
+      container
+        heading
+          text "4 · 提交与审批"
+        text "已批准 · 生管主管 · 2026-09-18T18:07:13+00:00。仅演示记录，不是生产指令。"
+      container
+        heading
+          text "计算历史"
+        table
+          table_row
+            table_cell
+              text "任务编号"
+            table_cell
+              text "状态"
+            table_cell
+              text "开始时间"
+            table_cell
+              text "操作"
+          table_row
+            table_cell
+              text "640348e236c6"
+            table_cell
+              text "已完成"
+            table_cell
+              text "2026-09-18T18:05:10+00:00"
+            table_cell
+              button [ref=717]
+                text "查看历史计算"
+          table_row
+            table_cell
+              text "4c9f5f09e22a"
+            table_cell
+              text "已完成"
+            table_cell
+              text "2026-09-18T18:03:31+00:00"
+            table_cell
+              button [ref=718]
+                text "查看历史计算"
+    text "APS 计划平台 · 演示环境：数据来自本机后端服务，未接入生产系统；角色为模拟身份，非生产鉴权。"

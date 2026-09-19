@@ -1,0 +1,290 @@
+[p1 "APS 计划与排程平台" | space "APS业务重构逐项页面验收"(7): 1 managed, 0 untracked — p1* "APS 计划与排程平台"]
+root
+  container "主导航"
+    container
+      text "APS"
+      container
+        text "计划与排程平台"
+        text "Advanced Planning & Scheduling"
+    container
+      anchor [ref=2787, url=http://127.0.0.1:18745/#/plans]
+        text "计划管理"
+      anchor [ref=2788, loc=href:/#/rules, url=http://127.0.0.1:18745/#/rules]
+        text "基础数据"
+    container
+      text "演示服务已连接"
+      container
+        text "演示环境 · 未接入 ERP / MES"
+        text "提交不会产生生产指令"
+  container [ref=2729]
+    table
+      table_row
+        table_cell
+          text "VIN_05"
+        table_cell
+          text "焊装"
+        table_cell
+          text "W_LINE"
+        table_cell
+          text "85"
+        table_cell
+          text "90"
+        table_cell
+          text "110"
+        table_cell
+          text "110"
+      table_row
+        table_cell
+          text "VIN_03"
+        table_cell
+          text "涂装"
+        table_cell
+          text "P_LINE"
+        table_cell
+          text "97"
+        table_cell
+          text "107"
+        table_cell
+          text "142"
+        table_cell
+          text "142"
+      table_row
+        table_cell
+          text "VIN_02"
+        table_cell
+          text "总装"
+        table_cell
+          text "A_LINE"
+        table_cell
+          text "110"
+        table_cell
+          text "110"
+        table_cell
+          text "135"
+        table_cell
+          text "135"
+      table_row
+        table_cell
+          text "VIN_06"
+        table_cell
+          text "焊装"
+        table_cell
+          text "W_LINE"
+        table_cell
+          text "135"
+        table_cell
+          text "140"
+        table_cell
+          text "155"
+        table_cell
+          text "155"
+      table_row
+        table_cell
+          text "VIN_04_PULLOUT"
+        table_cell
+          text "涂装"
+        table_cell
+          text "P_LINE"
+        table_cell
+          text "142"
+        table_cell
+          text "142"
+        table_cell
+          text "172"
+        table_cell
+          text "172"
+      table_row
+        table_cell
+          text "VIN_03"
+        table_cell
+          text "总装"
+        table_cell
+          text "A_LINE"
+        table_cell
+          text "155"
+        table_cell
+          text "155"
+        table_cell
+          text "180"
+        table_cell
+          text "180"
+      table_row
+        table_cell
+          text "VIN_05"
+        table_cell
+          text "涂装"
+        table_cell
+          text "P_LINE"
+        table_cell
+          text "172"
+        table_cell
+          text "182"
+        table_cell
+          text "217"
+        table_cell
+          text "217"
+      table_row
+        table_cell
+          text "VIN_07"
+        table_cell
+          text "焊装"
+        table_cell
+          text "W_LINE"
+        table_cell
+          text "180"
+        table_cell
+          text "180"
+        table_cell
+          text "195"
+        table_cell
+          text "195"
+      table_row
+        table_cell
+          text "VIN_06"
+        table_cell
+          text "涂装"
+        table_cell
+          text "P_LINE"
+        table_cell
+          text "217"
+        table_cell
+          text "227"
+        table_cell
+          text "262"
+        table_cell
+          text "262"
+      table_row
+        table_cell
+          text "VIN_05"
+        table_cell
+          text "总装"
+        table_cell
+          text "A_LINE"
+        table_cell
+          text "219"
+        table_cell
+          text "219"
+        table_cell
+          text "249"
+        table_cell
+          text "249"
+      table_row
+        table_cell
+          text "VIN_07"
+        table_cell
+          text "涂装"
+        table_cell
+          text "P_LINE"
+        table_cell
+          text "262"
+        table_cell
+          text "272"
+        table_cell
+          text "307"
+        table_cell
+          text "307"
+      table_row
+        table_cell
+          text "VIN_06"
+        table_cell
+          text "总装"
+        table_cell
+          text "A_LINE"
+        table_cell
+          text "264"
+        table_cell
+          text "264"
+        table_cell
+          text "289"
+        table_cell
+          text "289"
+      table_row
+        table_cell
+          text "VIN_07"
+        table_cell
+          text "总装"
+        table_cell
+          text "A_LINE"
+        table_cell
+          text "309"
+        table_cell
+          text "309"
+        table_cell
+          text "334"
+        table_cell
+          text "334"
+      table_row
+        table_cell
+          text "VIN_08"
+        table_cell
+          text "焊装"
+        table_cell
+          text "W_LINE"
+        table_cell
+          text "1440"
+        table_cell
+          text "1440"
+        table_cell
+          text "1455"
+        table_cell
+          text "1455"
+      table_row
+        table_cell
+          text "VIN_09"
+        table_cell
+          text "焊装"
+        table_cell
+          text "W_LINE"
+        table_cell
+          text "1455"
+        table_cell
+          text "1460"
+        table_cell
+          text "1480"
+        table_cell
+          text "1480"
+      table_row
+        table_cell
+          text "VIN_08"
+        table_cell
+          text "涂装"
+        table_cell
+          text "P_LINE"
+        table_cell
+          text "1457"
+        table_cell
+          text "1467"
+        table_cell
+          text "1502"
+        table_cell
+          text "1502"
+      table_row
+        table_cell
+          text "VIN_10"
+        table_cell
+          text "焊装"
+        table_cell
+          text "W_LINE"
+        table_cell
+          text "1480"
+        table_cell
+          text "1485"
+        table_cell
+          text "1500"
+        table_cell
+          text "1500"
+      table_row
+        table_cell
+          text "VIN_11"
+        table_cell
+          text "焊装"
+        table_cell
+          text "W_LINE"
+        table_cell
+          text "1500"
+        table_cell
+          text "1500"
+        table_cell
+          text "1515"
+        table_cell
+          text "1515"

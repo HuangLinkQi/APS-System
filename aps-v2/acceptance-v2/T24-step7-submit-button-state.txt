@@ -1,0 +1,60 @@
+[p1 "APS 计划与排程平台" | space "APS业务重构逐项页面验收"(7): 1 managed, 0 untracked — p1* "APS 计划与排程平台"]
+root
+  container "主导航"
+    container
+      text "APS"
+      container
+        text "计划与排程平台"
+        text "Advanced Planning & Scheduling"
+    container
+      anchor [ref=1420, url=http://127.0.0.1:18745/#/plans]
+        text "计划管理"
+      anchor [ref=1421, loc=href:/#/rules, url=http://127.0.0.1:18745/#/rules]
+        text "基础数据"
+    container
+      text "演示服务已连接"
+      container
+        text "演示环境 · 未接入 ERP / MES"
+        text "提交不会产生生产指令"
+  container [ref=1036]
+    container
+      container [ref=1422]
+        text "各工序时间 · 从场景起点计分钟"
+      container [ref=1423]
+        text "未完成订单 · 3（未排3台，已排未完成0台）"
+      container [ref=1424]
+        text "校验项目"
+      container [ref=1425]
+        text "全部计算指标"
+    container
+      heading
+        text "4 · 提交与审批"
+      paragraph
+        text "选择可提交候选后交给主管审批。未完成车辆或校验不通过将阻断提交。"
+      container
+        button [ref=1426]
+          text "提交所选方案"
+        text "不可提交：存在 3 台未完工订单（未排 3 台、已排未完工 0 台）：VIN_10、VIN_11、VIN_12"
+    container
+      heading
+        text "计算历史"
+      table
+        table_row
+          table_cell
+            text "任务编号"
+          table_cell
+            text "状态"
+          table_cell
+            text "开始时间"
+          table_cell
+            text "操作"
+        table_row
+          table_cell
+            text "1a8e42b379af"
+          table_cell
+            text "已完成"
+          table_cell
+            text "2026-09-18T18:20:23+00:00"
+          table_cell
+            button [ref=1427]
+              text "查看历史计算"
